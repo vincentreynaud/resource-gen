@@ -6,16 +6,16 @@ const markdownMagic = require("markdown-magic"); // https://www.npmjs.com/packag
 //   "file:///Users/vincentreynaud/Dropbox/Development DCI/tools-&-resources"
 // ); // For most fs module functions, the path or filename argument may be passed as a WHATWG URL object
 
-const file = "Getting Started.webloc";
-try {
-  console.log("trying");
-  fs.open(file, "r", (err, fd) => {
-    if (err) throw err;
-  });
+const file = "./Getting Started.webloc";
 
-  fs.readFileSync(file, "utf8", (err, content) => {
+try {
+  fs.readFile(file, { encoding: "utf8" }, function(err, data) {
+    const link = data.split("<string>")[1].split("</string>")[0];
+    console.log("link:", link);
+  });
+  fs.stat(file, (err, stats) => {
     if (err) throw err;
-    console.log(`content: ${content}`);
+    console.log("stats:", stats);
   });
 } catch (err) {
   console.error(err);
