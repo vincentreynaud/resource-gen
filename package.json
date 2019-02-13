@@ -12,6 +12,7 @@
   "dependencies": {
     "file-system": "^2.2.2",
     "markdown-magic": "^0.1.25",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "pdf-parse": "^1.1.1"
   }
 }

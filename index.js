@@ -1,39 +1,73 @@
 const fs = require("fs");
+const pdf = require("pdf-parse");
 const path = require("path");
 const markdownMagic = require("markdown-magic");
 // https://www.npmjs.com/package/markdown-magic-directory-tree
 
+("use strict");
+
+/**
+ * Improvements:
+ * - Capitalise section titles
+ * - Relay nesting info to allow diff between h1, h2, h3
+ */
+
 const outputFile = "dev-tools-&-resources.md";
 const ignored = ["node_modules", ".git", ".DS_Store"];
 
-const walk = dirname => {
-  const files = fs.readdirSync(dirname);
+const walk = dirpath => {
+  const files = fs.readdirSync(dirpath);
   let links = [];
 
   files.forEach(file => {
-    file = path.join("./", dirname, file);
+    const filePath = path.join(dirpath, file);
 
     // Check for nested dirs
-    const stat = fs.statSync(file);
-    if (stat.isDirectory()) {
-      console.log("isDirectory!!!!");
-      walk(file); // give dirname
+    if (fs.statSync(filePath).isDirectory()) {
+      walk(filePath); // give dirname
     }
 
     // Retrieve Link from .webloc files
-    if (path.extname(file) === ".webloc") {
-      const content = fs.readFileSync(file, { encoding: "utf8" });
+    if (path.extname(filePath) === ".webloc") {
+      const content = fs.readFileSync(filePath, { encoding: "utf8" });
 
       if (content.includes("<string>")) {
         const link = content.split("<string>")[1].split("</string>")[0];
-        console.log("links before push:", links);
         links.push(link);
       } else if (content.includes("SURL_")) {
-        console.log(`FILE ${file} WITH WEIRD ENCORDING HERE`);
+        console.log(`File "${file}" with WEIRD ENCORDING HERE`);
+      } else {
+        console.log(`Cannot compute file "${file}"`);
       }
+
+      // Retrieve Link from .pdf files
+    } else if (path.extname(filePath) === ".pdf") {
+      const content = fs.readFileSync(filePath);
+      // here asynchronous fucks with the final links array returning. fix this
+      pdf(content).then(data => {
+        const link = data.text.split("\n")[3].slice(0, -3);
+        // only works if doc doesn't exceed 9 pages, implement page number check
+
+        if (link.includes("http")) {
+          console.log("link:", link);
+          links.push(link);
+        } else {
+          data = data.text.split("\n");
+          console.log("link", data);
+          console.log("Could not find any link at specified location");
+        }
+      });
     }
   });
-  console.log("final links:", links);
+
+  const route = dirpath.split("/");
+  const section = {
+    title: route[route.length - 1],
+    links
+  };
+
+  console.log("Section Title:", section.title);
+  console.log("Section Links:", section.links);
 };
 
 try {
