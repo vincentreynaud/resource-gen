@@ -7,31 +7,38 @@ const outputFile = "dev-tools-&-resources.md";
 const ignored = ["node_modules", ".git", ".DS_Store"];
 
 const walk = async dirname => {
-  // implement nested readdir
   fs.readdir(dirname, (err, files) => {
     if (err) throw err;
-    console.log("files", files);
+    let links = [];
 
     files.forEach(file => {
       file = path.join("./", dirname, file);
 
-      if (path.extname(file) === "") {
-        console.log("there is a directory here");
-        const nestedDir = path.extname(file);
-        // walk this dir
-      }
+      // Check for nested dirs
+      fs.stat(file, (err, stat) => {
+        if (err) throw err;
+        if (stat.isDirectory()) {
+          console.log("isDirectory!!!!");
+          walk(file); // give dirname
+        }
+      });
 
       // Retrieve Link from .webloc files
       if (path.extname(file) === ".webloc") {
         fs.readFile(file, { encoding: "utf8" }, (err, content) => {
           if (err) throw err;
+
           if (content.includes("<string>")) {
             const link = content.split("<string>")[1].split("</string>")[0];
-            console.log("link:", link);
-            return link;
+            console.log("links before push:", links);
+            links.push(link);
+          } else if (content.includes("SURL_")) {
+            console.log(`FILE ${file} WITH WEIRD ENCORDING HERE`);
           }
         });
       }
+
+      console.log("final links:", links);
     });
   });
 };
@@ -41,6 +48,14 @@ try {
 } catch (err) {
   console.error(err);
 }
+
+/* ALTERNATIVE DIR IDENTIFICATION
+  if (path.extname(file) === "") {
+    console.log("there is a directory here");
+    const nestedDir = path.extname(file);
+    walk(nestedDir)
+  }
+*/
 
 /* TRY OUTS
   console.log("basename", path.basename(file));
