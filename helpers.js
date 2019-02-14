@@ -12,21 +12,32 @@ exports.startsWithHttp = link => {
   return doesit === 0 ? true : false;
 };
 
+exports.linkPosition = str => {
+  return str.search(/(http|https):\/\//);
+};
+
+// fix this
+const linkPosition = str => {
+  return str.search(/(http|https):\/\//);
+};
+
 exports.searchPdfByLine = arr => {
   let link = null;
 
   arr.forEach(line => {
-    const linkPosition = line.search(/(http|https):\/\//);
-
     if (link !== null) {
       return;
-    } else if (linkPosition !== -1) {
-      link = line.slice(linkPosition);
+    } else if (linkPosition(line) !== -1) {
+      link = line.slice(linkPosition(line));
       return link;
     }
   });
 
   return link;
+};
+
+exports.hasStringTag = str => {
+  return str.search(/<string>/g) !== -1 ? true : false;
 };
 
 exports.cutPageNumbering = link => {

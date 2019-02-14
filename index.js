@@ -1,20 +1,21 @@
 const fs = require("fs");
 const pdf = require("pdf-parse");
 const path = require("path");
-const markdownMagic = require("markdown-magic");
-// https://www.npmjs.com/package/markdown-magic-directory-tree
+const markdownMagic = require("markdown-magic"); // https://www.npmjs.com/package/markdown-magic-directory-tree
 
 ("use strict");
 
 /**
  * Improvements:
  * - Capitalise section titles
- *
+ * - order links by alphabetical order?
  */
 
 const {
   asyncForEach,
   lastItem,
+  linkPosition,
+  hasStringTag,
   searchPdfByLine,
   cutPageNumbering,
   isIncomplete
@@ -23,6 +24,8 @@ const {
 const outputFile = "dev-tools-&-resources.md";
 
 const walk = async (dirpath, rank = 0) => {
+  if (rank === 3) return; // security
+
   const files = fs.readdirSync(dirpath);
   const route = dirpath.split("/");
   const section = {
@@ -36,27 +39,40 @@ const walk = async (dirpath, rank = 0) => {
   await asyncForEach(files, async file => {
     const filePath = path.join(dirpath, file);
 
-    // Check for nested dirs
+    // Nested directories
     // here asynchronous fucks with the final links array returning. fix this
     if (fs.statSync(filePath).isDirectory()) {
       walk(filePath, section.rank);
     }
 
+    // .webloc Files
     if (path.extname(filePath) === ".webloc") {
       const content = fs.readFileSync(filePath, { encoding: "utf8" });
-      const linkPosition = content.search(/(http|https):\/\//);
       let link = null;
 
-      if (linkPosition !== -1 && content.includes("<string>")) {
+      if (linkPosition(content) !== -1 && hasStringTag(content)) {
         link = content.split("<string>")[1].split("</string>")[0];
         section.links.push(link);
-      } else if (linkPosition !== -1) {
-        const slice = content.slice(linkPosition);
+      } else if (linkPosition(content) !== -1) {
+        const slice = content.slice(linkPosition(content));
         link = slice.split("\b")[0];
         section.links.push(link);
       } else {
         console.log(`NO LINK FOUND in: ${file}`);
       }
+
+      // .desktop Files
+    } else if (path.extname(filePath) === ".desktop") {
+      const content = fs.readFileSync(filePath, { encoding: "utf8" });
+      let link = null;
+
+      if (linkPosition(content) !== -1) {
+        const slice = content.slice(linkPosition(content));
+        link = slice.split("\n")[0];
+        section.links.push(link);
+      }
+
+      // .pdf Files
     } else if (path.extname(filePath) === ".pdf") {
       const content = fs.readFileSync(filePath);
 
@@ -80,17 +96,19 @@ const walk = async (dirpath, rank = 0) => {
     }
   });
 
-  console.log("Section Title:", section.title);
-  console.log("Section Rank:", section.rank);
+  console.log("");
+  console.log(`###### ${section.title.toUpperCase()} (sub ${section.rank})`);
+  console.log("##################################");
   console.log("Section Links:", section.links);
   console.log("Missing Links:", section.noLink);
   console.log("Incomplete Links:", section.incompleteLink);
+  console.log("");
 
   return section;
 };
 
 try {
-  walk("./data/sample");
+  walk("./data");
 } catch (err) {
   console.error(err);
 }
