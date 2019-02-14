@@ -15,6 +15,8 @@ const markdownMagic = require("markdown-magic");
 const outputFile = "dev-tools-&-resources.md";
 const ignored = ["node_modules", ".git", ".DS_Store"];
 
+const lastItem = arr => arr[arr.length - 1];
+
 const walk = dirpath => {
   const files = fs.readdirSync(dirpath);
   let links = [];
@@ -53,8 +55,8 @@ const walk = dirpath => {
           links.push(link);
         } else {
           data = data.text.split("\n");
-          console.log("link", data);
-          console.log("Could not find any link at specified location");
+          // console.log("link", data);
+          console.log(`in: "${file}" link not found at specified location`);
         }
       });
     }
@@ -62,7 +64,7 @@ const walk = dirpath => {
 
   const route = dirpath.split("/");
   const section = {
-    title: route[route.length - 1],
+    title: lastItem(route),
     links
   };
 
@@ -71,7 +73,7 @@ const walk = dirpath => {
 };
 
 try {
-  walk("./data/color");
+  walk("./data/sample");
 } catch (err) {
   console.error(err);
 }
