@@ -22,34 +22,36 @@ const {
 
 const outputFile = "dev-tools-&-resources.md";
 
-const walk = async dirpath => {
+const walk = async (dirpath, rank = 0) => {
   const files = fs.readdirSync(dirpath);
-  const links = [];
-  const noLink = [];
-  const incompleteLink = [];
+  const route = dirpath.split("/");
+  const section = {
+    title: lastItem(route),
+    rank: rank + 1,
+    links: [],
+    noLink: [],
+    incompleteLink: []
+  };
 
   await asyncForEach(files, async file => {
     const filePath = path.join(dirpath, file);
 
     // Check for nested dirs
     if (fs.statSync(filePath).isDirectory()) {
-      walk(filePath); // give dirname
+      walk(filePath, section.rank);
     }
 
-    // .webloc files
     if (path.extname(filePath) === ".webloc") {
       const content = fs.readFileSync(filePath, { encoding: "utf8" });
 
       if (content.includes("<string>")) {
         const link = content.split("<string>")[1].split("</string>")[0];
-        links.push(link);
+        section.links.push(link);
       } else if (content.includes("SURL_")) {
-        console.log(`File "${file}" with WEIRD ENCORDING HERE`);
+        console.log(`WEIRD ENCORDING in: ${file}`);
       } else {
-        console.log(`Cannot compute file "${file}"`);
+        console.log(`CANNOT COMPUTE "${file}"`);
       }
-
-      // .pdf files
     } else if (path.extname(filePath) === ".pdf") {
       const content = fs.readFileSync(filePath);
       // here asynchronous fucks with the final links array returning. fix this
@@ -59,32 +61,27 @@ const walk = async dirpath => {
 
         if (link === null) {
           console.log(`NO LINK FOUND in: ${file}`);
-          noLink.push(file);
+          section.noLink.push(file);
           return;
         } else if (isIncomplete(link)) {
           console.log(`INCOMPLETE LINK in: ${file}`);
-          incompleteLink.push(file);
+          section.incompleteLink.push(file);
           return;
         }
 
         link = cutPageNumbering(link);
-        links.push(link);
+        section.links.push(link);
       });
     }
   });
 
-  const route = dirpath.split("/");
-  const section = {
-    title: lastItem(route),
-    links,
-    noLink,
-    incompleteLink
-  };
-
   console.log("Section Title:", section.title);
+  console.log("Section Rank:", section.rank);
   console.log("Section Links:", section.links);
   console.log("Missing Links:", section.noLink);
   console.log("Incomplete Links:", section.incompleteLink);
+
+  return section;
 };
 
 try {
