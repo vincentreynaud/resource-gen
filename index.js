@@ -16,22 +16,24 @@ const {
   lastItem,
   searchPdfByLine,
   cutPageNumbering,
-  startsWithHttp
+  isIncomplete
 } = require("./helpers");
 
 const outputFile = "dev-tools-&-resources.md";
 
 const walk = dirpath => {
   const files = fs.readdirSync(dirpath);
-  let links = [];
+  const links = [];
+  const noLink = [];
+  const incompleteLink = [];
 
   files.forEach(file => {
     const filePath = path.join(dirpath, file);
 
-    // // Check for nested dirs
-    // if (fs.statSync(filePath).isDirectory()) {
-    //   walk(filePath); // give dirname
-    // }
+    // Check for nested dirs
+    if (fs.statSync(filePath).isDirectory()) {
+      walk(filePath); // give dirname
+    }
 
     // .webloc files
     if (path.extname(filePath) === ".webloc") {
@@ -55,13 +57,22 @@ const walk = dirpath => {
 
         let link = searchPdfByLine(dataByLine);
         if (link === null) {
-          console.log(`No link found in ${file}`);
+          console.log(`NO LINK FOUND in: ${file}`);
+          noLink.push(file);
+          return;
+        } else if (isIncomplete(link)) {
+          console.log(`INCOMPLETE LINK in: ${file}`);
+          incompleteLink.push(file);
           return;
         }
 
         link = cutPageNumbering(link);
-        console.log("link", link);
+        console.log("Link:", link);
         links.push(link);
+
+        console.log("links", links);
+        console.log("noLink", noLink);
+        console.log("incompleteLink", incompleteLink);
       });
     }
   });
@@ -69,11 +80,15 @@ const walk = dirpath => {
   const route = dirpath.split("/");
   const section = {
     title: lastItem(route),
-    links
+    links,
+    noLink,
+    incompleteLink
   };
 
   console.log("Section Title:", section.title);
   console.log("Section Links:", section.links);
+  console.log("Missing Links:", section.noLink);
+  console.log("Incomplete Links:", section.incompleteLink);
 };
 
 try {

@@ -32,3 +32,8 @@ exports.cutPageNumbering = link => {
     return link;
   }
 };
+
+exports.isIncomplete = link => {
+  const dotdotdot = link.search(/\.{3}$/);
+  if (dotdotdot !== -1) return true;
+};
