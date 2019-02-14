@@ -16,12 +16,12 @@ exports.searchPdfByLine = arr => {
   let link = null;
 
   arr.forEach(line => {
-    const httpPosition = line.search(/(http|https):\/\//);
+    const linkPosition = line.search(/(http|https):\/\//);
 
     if (link !== null) {
       return;
-    } else if (httpPosition !== -1) {
-      link = line.slice(httpPosition);
+    } else if (linkPosition !== -1) {
+      link = line.slice(linkPosition);
       return link;
     }
   });

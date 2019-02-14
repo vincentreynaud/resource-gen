@@ -9,7 +9,7 @@ const markdownMagic = require("markdown-magic");
 /**
  * Improvements:
  * - Capitalise section titles
- * - Relay nesting info to allow diff between h1, h2, h3
+ *
  */
 
 const {
@@ -37,24 +37,29 @@ const walk = async (dirpath, rank = 0) => {
     const filePath = path.join(dirpath, file);
 
     // Check for nested dirs
+    // here asynchronous fucks with the final links array returning. fix this
     if (fs.statSync(filePath).isDirectory()) {
       walk(filePath, section.rank);
     }
 
     if (path.extname(filePath) === ".webloc") {
       const content = fs.readFileSync(filePath, { encoding: "utf8" });
+      const linkPosition = content.search(/(http|https):\/\//);
+      let link = null;
 
-      if (content.includes("<string>")) {
-        const link = content.split("<string>")[1].split("</string>")[0];
+      if (linkPosition !== -1 && content.includes("<string>")) {
+        link = content.split("<string>")[1].split("</string>")[0];
         section.links.push(link);
-      } else if (content.includes("SURL_")) {
-        console.log(`WEIRD ENCORDING in: ${file}`);
+      } else if (linkPosition !== -1) {
+        const slice = content.slice(linkPosition);
+        link = slice.split("\b")[0];
+        section.links.push(link);
       } else {
-        console.log(`CANNOT COMPUTE "${file}"`);
+        console.log(`NO LINK FOUND in: ${file}`);
       }
     } else if (path.extname(filePath) === ".pdf") {
       const content = fs.readFileSync(filePath);
-      // here asynchronous fucks with the final links array returning. fix this
+
       await pdf(content).then(data => {
         const dataByLine = data.text.split("\n");
         let link = searchPdfByLine(dataByLine);
