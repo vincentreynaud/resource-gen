@@ -12,10 +12,14 @@ const markdownMagic = require("markdown-magic");
  * - Relay nesting info to allow diff between h1, h2, h3
  */
 
-const outputFile = "dev-tools-&-resources.md";
-const ignored = ["node_modules", ".git", ".DS_Store"];
+const {
+  lastItem,
+  searchPdfByLine,
+  cutPageNumbering,
+  startsWithHttp
+} = require("./helpers");
 
-const lastItem = arr => arr[arr.length - 1];
+const outputFile = "dev-tools-&-resources.md";
 
 const walk = dirpath => {
   const files = fs.readdirSync(dirpath);
@@ -24,12 +28,12 @@ const walk = dirpath => {
   files.forEach(file => {
     const filePath = path.join(dirpath, file);
 
-    // Check for nested dirs
-    if (fs.statSync(filePath).isDirectory()) {
-      walk(filePath); // give dirname
-    }
+    // // Check for nested dirs
+    // if (fs.statSync(filePath).isDirectory()) {
+    //   walk(filePath); // give dirname
+    // }
 
-    // Retrieve Link from .webloc files
+    // .webloc files
     if (path.extname(filePath) === ".webloc") {
       const content = fs.readFileSync(filePath, { encoding: "utf8" });
 
@@ -42,22 +46,22 @@ const walk = dirpath => {
         console.log(`Cannot compute file "${file}"`);
       }
 
-      // Retrieve Link from .pdf files
+      // .pdf files
     } else if (path.extname(filePath) === ".pdf") {
       const content = fs.readFileSync(filePath);
       // here asynchronous fucks with the final links array returning. fix this
       pdf(content).then(data => {
-        const link = data.text.split("\n")[3].slice(0, -3);
-        // only works if doc doesn't exceed 9 pages, implement page number check
+        const dataByLine = data.text.split("\n");
 
-        if (link.includes("http")) {
-          console.log("link:", link);
-          links.push(link);
-        } else {
-          data = data.text.split("\n");
-          // console.log("link", data);
-          console.log(`in: "${file}" link not found at specified location`);
+        let link = searchPdfByLine(dataByLine);
+        if (link === null) {
+          console.log(`No link found in ${file}`);
+          return;
         }
+
+        link = cutPageNumbering(link);
+        console.log("link", link);
+        links.push(link);
       });
     }
   });
