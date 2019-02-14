@@ -1,5 +1,12 @@
+exports.asyncForEach = async (arr, callback) => {
+  for (let i = 0; i < arr.length; i++) {
+    await callback(arr[i], i, arr);
+  }
+};
+
 exports.lastItem = arr => arr[arr.length - 1];
 
+// useless?
 exports.startsWithHttp = link => {
   const doesit = link.search(/^(http|https):\/\//);
   return doesit === 0 ? true : false;

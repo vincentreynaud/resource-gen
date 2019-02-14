@@ -13,6 +13,7 @@ const markdownMagic = require("markdown-magic");
  */
 
 const {
+  asyncForEach,
   lastItem,
   searchPdfByLine,
   cutPageNumbering,
@@ -21,13 +22,13 @@ const {
 
 const outputFile = "dev-tools-&-resources.md";
 
-const walk = dirpath => {
+const walk = async dirpath => {
   const files = fs.readdirSync(dirpath);
   const links = [];
   const noLink = [];
   const incompleteLink = [];
 
-  files.forEach(file => {
+  await asyncForEach(files, async file => {
     const filePath = path.join(dirpath, file);
 
     // Check for nested dirs
@@ -52,10 +53,10 @@ const walk = dirpath => {
     } else if (path.extname(filePath) === ".pdf") {
       const content = fs.readFileSync(filePath);
       // here asynchronous fucks with the final links array returning. fix this
-      pdf(content).then(data => {
+      await pdf(content).then(data => {
         const dataByLine = data.text.split("\n");
-
         let link = searchPdfByLine(dataByLine);
+
         if (link === null) {
           console.log(`NO LINK FOUND in: ${file}`);
           noLink.push(file);
@@ -67,12 +68,7 @@ const walk = dirpath => {
         }
 
         link = cutPageNumbering(link);
-        console.log("Link:", link);
         links.push(link);
-
-        console.log("links", links);
-        console.log("noLink", noLink);
-        console.log("incompleteLink", incompleteLink);
       });
     }
   });
