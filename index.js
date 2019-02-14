@@ -16,7 +16,7 @@ const {
   lastItem,
   linkPosition,
   hasStringTag,
-  searchPdfByLine,
+  findLinkByLine,
   cutPageNumbering,
   isIncomplete
 } = require("./helpers");
@@ -38,6 +38,7 @@ const walk = async (dirpath, rank = 0) => {
 
   await asyncForEach(files, async file => {
     const filePath = path.join(dirpath, file);
+    let link = null;
 
     // Nested directories
     // here asynchronous fucks with the final links array returning. fix this
@@ -45,54 +46,55 @@ const walk = async (dirpath, rank = 0) => {
       walk(filePath, section.rank);
     }
 
-    // .webloc Files
-    if (path.extname(filePath) === ".webloc") {
-      const content = fs.readFileSync(filePath, { encoding: "utf8" });
-      let link = null;
+    switch (path.extname(filePath)) {
+      case ".webloc":
+        const weblocStr = fs.readFileSync(filePath, { encoding: "utf8" });
 
-      if (linkPosition(content) !== -1 && hasStringTag(content)) {
-        link = content.split("<string>")[1].split("</string>")[0];
-        section.links.push(link);
-      } else if (linkPosition(content) !== -1) {
-        const slice = content.slice(linkPosition(content));
-        link = slice.split("\b")[0];
-        section.links.push(link);
-      } else {
-        console.log(`NO LINK FOUND in: ${file}`);
-      }
-
-      // .desktop Files
-    } else if (path.extname(filePath) === ".desktop") {
-      const content = fs.readFileSync(filePath, { encoding: "utf8" });
-      let link = null;
-
-      if (linkPosition(content) !== -1) {
-        const slice = content.slice(linkPosition(content));
-        link = slice.split("\n")[0];
-        section.links.push(link);
-      }
-
-      // .pdf Files
-    } else if (path.extname(filePath) === ".pdf") {
-      const content = fs.readFileSync(filePath);
-
-      await pdf(content).then(data => {
-        const dataByLine = data.text.split("\n");
-        let link = searchPdfByLine(dataByLine);
-
-        if (link === null) {
+        if (linkPosition(weblocStr) !== -1 && hasStringTag(weblocStr)) {
+          link = weblocStr.split("<string>")[1].split("</string>")[0];
+          section.links.push(link);
+        } else if (linkPosition(weblocStr) !== -1) {
+          const slice = weblocStr.slice(linkPosition(weblocStr));
+          link = slice.split("\b")[0];
+          section.links.push(link);
+        } else {
           console.log(`NO LINK FOUND in: ${file}`);
-          section.noLink.push(file);
-          return;
-        } else if (isIncomplete(link)) {
-          console.log(`INCOMPLETE LINK in: ${file}`);
-          section.incompleteLink.push(file);
-          return;
         }
+        break;
 
-        link = cutPageNumbering(link);
-        section.links.push(link);
-      });
+      case ".desktop":
+        const desktopStr = fs.readFileSync(filePath, { encoding: "utf8" });
+
+        if (linkPosition(desktopStr) !== -1) {
+          const slice = desktopStr.slice(linkPosition(desktopStr));
+          link = slice.split("\n")[0];
+          section.links.push(link);
+        } else {
+          console.log(`NO LINK FOUND in: ${file}`);
+        }
+        break;
+
+      case ".pdf":
+        const pdfBuffer = fs.readFileSync(filePath);
+
+        await pdf(pdfBuffer).then(data => {
+          const dataByLine = data.text.split("\n");
+          link = findLinkByLine(dataByLine);
+
+          if (link === null) {
+            console.log(`NO LINK FOUND in: ${file}`);
+            section.noLink.push(file);
+            return;
+          } else if (isIncomplete(link)) {
+            console.log(`INCOMPLETE LINK in: ${file}`);
+            section.incompleteLink.push(file);
+            return;
+          }
+
+          link = cutPageNumbering(link);
+          section.links.push(link);
+        });
+        break;
     }
   });
 
@@ -108,7 +110,7 @@ const walk = async (dirpath, rank = 0) => {
 };
 
 try {
-  walk("./data");
+  walk("./data/color");
 } catch (err) {
   console.error(err);
 }

@@ -21,7 +21,7 @@ const linkPosition = str => {
   return str.search(/(http|https):\/\//);
 };
 
-exports.searchPdfByLine = arr => {
+exports.findLinkByLine = arr => {
   let link = null;
 
   arr.forEach(line => {
