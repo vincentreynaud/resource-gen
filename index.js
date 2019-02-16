@@ -48,13 +48,13 @@ const walk = async (dirpath, rank = 0) => {
 
     switch (path.extname(filePath)) {
       case ".webloc":
-        const weblocStr = fs.readFileSync(filePath, { encoding: "utf8" });
+        const wFileStr = fs.readFileSync(filePath, { encoding: "utf8" });
 
-        if (linkPosition(weblocStr) !== -1 && hasStringTag(weblocStr)) {
-          link = weblocStr.split("<string>")[1].split("</string>")[0];
+        if (linkPosition(wFileStr) !== -1 && hasStringTag(wFileStr)) {
+          link = wFileStr.split("<string>")[1].split("</string>")[0];
           section.links.push(link);
-        } else if (linkPosition(weblocStr) !== -1) {
-          const slice = weblocStr.slice(linkPosition(weblocStr));
+        } else if (linkPosition(wFileStr) !== -1) {
+          const slice = wFileStr.slice(linkPosition(wFileStr));
           link = slice.split("\b")[0];
           section.links.push(link);
         } else {
@@ -63,10 +63,10 @@ const walk = async (dirpath, rank = 0) => {
         break;
 
       case ".desktop":
-        const desktopStr = fs.readFileSync(filePath, { encoding: "utf8" });
+        const dFileStr = fs.readFileSync(filePath, { encoding: "utf8" });
 
-        if (linkPosition(desktopStr) !== -1) {
-          const slice = desktopStr.slice(linkPosition(desktopStr));
+        if (linkPosition(dFileStr) !== -1) {
+          const slice = dFileStr.slice(linkPosition(dFileStr));
           link = slice.split("\n")[0];
           section.links.push(link);
         } else {
@@ -75,9 +75,9 @@ const walk = async (dirpath, rank = 0) => {
         break;
 
       case ".pdf":
-        const pdfBuffer = fs.readFileSync(filePath);
+        const buffer = fs.readFileSync(filePath);
 
-        await pdf(pdfBuffer).then(data => {
+        await pdf(buffer).then(data => {
           const dataByLine = data.text.split("\n");
           link = findLinkByLine(dataByLine);
 
@@ -105,6 +105,12 @@ const walk = async (dirpath, rank = 0) => {
   console.log("Missing Links:", section.noLink);
   console.log("Incomplete Links:", section.incompleteLink);
   console.log("");
+
+  const data = `
+  # ${section.title.toUpperCase()}
+  ${section.links.forEach(link => `${link}`)}
+  `;
+  fs.writeFileSync(outputFile, data);
 
   return section;
 };
