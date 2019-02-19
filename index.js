@@ -1,14 +1,21 @@
 const fs = require("fs");
 const pdf = require("pdf-parse");
 const path = require("path");
-const markdownMagic = require("markdown-magic"); // https://www.npmjs.com/package/markdown-magic-directory-tree
 
 ("use strict");
 
 /**
  * Improvements:
+ * - checkout markdown-magic
  * - Capitalise section titles
- * - order links by alphabetical order?
+ * - order links by alphabetical order? -already done?
+ * - make it a CLI npm package to install globally
+ * (can use https://github.com/yargs/yargs)
+ *
+ * Publishing:
+ * - generate .md on github
+ * - update every X
+ * - host with now
  */
 
 const {
@@ -116,7 +123,7 @@ const walk = async (dirpath, rank = 0) => {
 };
 
 try {
-  walk("./data/color");
+  walk("./data");
 } catch (err) {
   console.error(err);
 }
