@@ -1,15 +1,24 @@
 {
-  "name": "md-resource-generator",
+  "name": "resource-markdown-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Utility to parse webloc & browser-printed pdf files of folder system into a comprehensive list of links in markdown",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "node tests.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "markdown",
+    "file-system",
+    "resource",
+    "web-links",
+    "generator"
+  ],
+  "author": "Vincent Reynaud",
+  "license": "MIT",
+  "bin": {
+    "resource-gen": "./index.js"
+  },
   "dependencies": {
     "file-system": "^2.2.2",
     "markdown-magic": "^0.1.25",

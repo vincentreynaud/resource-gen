@@ -1,8 +1,4 @@
-const fs = require("fs");
-const pdf = require("pdf-parse");
-const path = require("path");
-
-("use strict");
+#!/usr/bin/env node
 
 /**
  * Improvements:
@@ -11,12 +7,19 @@ const path = require("path");
  * - order links by alphabetical order? -already done?
  * - make it a CLI npm package to install globally
  * (can use https://github.com/yargs/yargs)
+ * - change index.js to cli.js + run $ chmod +x cli.js + npm link
  *
  * Publishing:
  * - generate .md on github
  * - update every X
  * - host with now
  */
+
+("use strict");
+
+const fs = require("fs");
+const pdf = require("pdf-parse");
+const path = require("path");
 
 const {
   asyncForEach,
@@ -29,6 +32,8 @@ const {
 } = require("./helpers");
 
 const outputFile = "dev-tools-&-resources.md";
+
+const [, , dirpath, ...options] = process.argv;
 
 const walk = async (dirpath, rank = 0) => {
   if (rank === 3) return; // security
@@ -123,7 +128,7 @@ const walk = async (dirpath, rank = 0) => {
 };
 
 try {
-  walk("./data");
+  walk(dirpath);
 } catch (err) {
   console.error(err);
 }
