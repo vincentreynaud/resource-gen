@@ -19,7 +19,7 @@
 
 ("use strict");
 
-const print = require("./lib/crawl");
+const print = require("./lib/print");
 const [, , dirpath, ...options] = process.argv;
 
 // error handling for no path provided
