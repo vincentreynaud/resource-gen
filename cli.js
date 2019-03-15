@@ -21,11 +21,11 @@
 "use strict";
 
 const print = require("./lib/print");
-const [, , dirpath, ...options] = process.argv;
+let [, , dirpath, ...options] = process.argv;
 
-// error handling for no path provided
-
-console.log("process.cwd", process.cwd());
+// dirpath = "/data/sample"; // debug
+dirpath = "/Users/vincentreynaud/Dropbox/Development DCI/tools-&-resources"; // debug
+const outputFile = "dev-tools-&-resources.md";
 
 try {
   print(dirpath);
