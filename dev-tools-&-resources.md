@@ -1,5 +1,5 @@
 
-# Tools-&-resources 
+# Tools & resources 
 https://jenkins.io/  
 http://plnkr.co/  
 https://thegrid.io/?utm_source=Facebook&utm_medium=CPC&utm_campaign=launch%2F  
@@ -57,13 +57,13 @@ https://css-tricks.com/controlling-css-animations-transitions-javascript/
 http://dynamicsjs.com/  
 https://animejs.com/  
 
-### Dynamic-page 
+### Dynamic page 
 https://css-tricks.com/rethinking-dynamic-page-replacing-content/  
 
 ## Authentication 
 https://jwt.io/  
 
-## Bug-fixes 
+## Bug fixes 
 https://denverdias.com/2014/11/19/bootstrap-scrollspy-tips/  
 https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-will-change-property/  
 https://medium.com/vehikl-news/fixed-background-image-performance-issue-6b7d9e2dbc55  
@@ -91,7 +91,7 @@ https://www.toptal.com/designers/subtlepatterns/
 ## Cron 
 https://crontab.guru/  
 
-## Css-generator 
+## Css generator 
 http://enjoycss.com/  
 
 ## Databases 
@@ -100,7 +100,7 @@ https://www.npmjs.com/package/lowdb
 ## Datenschutzerklärung 
 https://www.wbs-law.de/it-recht/datenschutzrecht/datenschutzerklaerung-generator/  
 
-## Deployment-hosting 
+## Deployment hosting 
 https://nowhosting.net/  
 https://medium.com/@RockChalkDev/deploying-with-zeits-now-cli-796e41f05102  
 https://all-inkl.com/  
@@ -120,7 +120,7 @@ https://sympli.io/blog/2017/02/15/heres-everything-you-need-to-know-about-favico
 https://github.com/audreyr/favicon-cheat-sheet  
 https://www.favicon.cc/  
 
-## File-system 
+## File system 
 https://appdividend.com/2018/10/09/node-js-file-system-module-example-tutorial/  
 https://stackabuse.com/reading-and-writing-json-files-with-node-js/  
 
@@ -177,19 +177,19 @@ https://icon.now.sh/
 ## Lists 
 http://css.maxdesign.com.au/listamatic/  
 
-## Math-models 
+## Math models 
 https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves  
 https://en.wikipedia.org/wiki/Dither  
 https://en.wikipedia.org/wiki/Hexadecimal  
 
-## Nerd-stuff 
+## Nerd stuff 
 http://patorjk.com/software/taag/#p=display&amp;f=Graffiti&amp;t=Type%20Something%20  
 
 ## Performance 
 https://developers.google.com/speed/pagespeed/insights/?hl=de  
 https://tools.pingdom.com/  
 
-## Positioning-&-layout 
+## Positioning & layout 
 https://codepen.io/franky/pen/zzOXey  
 https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/  
 https://css-tricks.com/centering-css-complete-guide/  
@@ -212,7 +212,7 @@ https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular
 http://cssmediaqueries.com/  
 https://css-tricks.com/snippets/css/media-queries-for-standard-devices/  
 
-## Responsive-images 
+## Responsive images 
 https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/  
 https://github.com/lovell/sharp  
 https://www.npmjs.com/package/responsive-images-generator  
@@ -235,7 +235,7 @@ https://www.youtube.com/watch?v=hpKIOqsFyPE
 http://www.commentcamarche.net/faq/9167-publier-un-fichier-pdf-sur-son-site  
 https://www.youtube.com/watch?v=sseD8nR5B8Y  
 
-## Static-website-generator 
+## Static website generator 
 https://graphcms.com/  
 https://jekyllrb.com/  
 https://gohugo.io/  
@@ -258,14 +258,14 @@ http://handlebarsjs.com/
 ## Trademark 
 https://www.dpma.de/english/search/dpmaregister/index.html  
 
-## Web-audio-API 
+## Web audio API 
 https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio  
 https://css-tricks.com/introduction-web-audio-api/  
 
 ### Dig deeper 
 https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API  
 
-## Web-design 
+## Web design 
 https://usecontrast.com/  
 https://cloudfour.com/thinks/designing-button-states/  
 https://cloudfour.com/thinks/encouraging-play-in-design-systems/  
@@ -276,6 +276,6 @@ http://www.calltoidea.com/
 https://land-book.com/  
 https://www.siteinspire.com/  
 
-## Web-standards 
+## Web standards 
 https://schema.org/  
 https://validator.w3.org/  
