@@ -3,12 +3,13 @@
 /**
  * Improvements:
  * - checkout markdown-magic
- * - Capitalise section titles
+ * - make debug option to show missing links
  * - order links by alphabetical order? -already done?
  * - find how to search outside of project
  * - make it a CLI npm package to install globally (can use https://github.com/yargs/yargs)
  * - change index.js to cli.js + run $ chmod +x cli.js + npm link
  * - fill in package.json https://docs.npmjs.com/files/package.json#bin
+ *
  *
  * Publishing:
  * - generate .md on github
@@ -17,7 +18,7 @@
  *
  */
 
-("use strict");
+"use strict";
 
 const print = require("./lib/print");
 const [, , dirpath, ...options] = process.argv;
