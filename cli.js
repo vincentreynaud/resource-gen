@@ -2,8 +2,8 @@
 
 /**
  * Improvements:
- * - checkout markdown-magic
  * - make debug option to show missing links
+ * - implement error handling for no path provided to command
  * - order links by alphabetical order? -already done?
  * - find how to search outside of project
  * - make it a CLI npm package to install globally (can use https://github.com/yargs/yargs)
@@ -28,7 +28,7 @@ dirpath = "/Users/vincentreynaud/Dropbox/Development DCI/tools-&-resources"; // 
 const outputFile = "dev-tools-&-resources.md";
 
 try {
-  print(dirpath);
+  print(outputFile, dirpath);
 } catch (err) {
   console.error(err);
 }
