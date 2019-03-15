@@ -29,6 +29,6 @@ const outputFile = "dev-tools-&-resources.md";
 
 try {
   print(outputFile, dirpath);
-} catch (err) {
-  console.error(err);
+} catch (error) {
+  console.error(error);
 }
