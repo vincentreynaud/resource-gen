@@ -5,6 +5,8 @@
  * - implement error handling for no path provided to command
  * - setup debug option to show missing links
  * - setup folder depth limit option
+ * - print tabs for each sub level
+ * - write title  of folder with path to it
  * - order links by alphabetical order? find why capital letters come first..?
  * - find possible errors in file path handling
  * - fix html character entity conversion at link retrieval?
@@ -26,9 +28,17 @@ const print = require("./lib/print");
 let [, , outputFileName, dirpath, ...options] = process.argv;
 
 // prettier-ignore
-outputFileName = "dev-tools-&-resources" // debug
 dirpath = "/Users/vincentreynaud/Dropbox/Development DCI/tools-&-resources"; // debug
-const outputFile = `${outputFileName}.md`;
+outputFileName = "dev-tools-&-resources"; // debug
+// prettier-ignore
+dirpath = "/Users/vincentreynaud/Desktop/FILES/WORK/2\ Research/4\ Science\ &\ Tech"; // debug
+outputFileName = "research"; // debug
+// prettier-ignore
+// dirpath = "/Users/vincentreynaud/Desktop/FILES/WORK/1\ Production/1\ COLLECTIVE\ ANXIETY/2\ Research/2\ Anthropocène"; // debug
+// prettier-ignore
+dirpath = "/Users/vincentreynaud/Desktop/FILES/WORK/1\ Production/1\ COLLECTIVE\ ANXIETY/2\ Research/"; // debug
+
+const outputFile = `output/${outputFileName}.md`;
 
 try {
   print(outputFile, dirpath);

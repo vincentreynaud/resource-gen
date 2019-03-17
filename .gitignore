@@ -5,3 +5,4 @@ node_modules
 tommy.js
 tests.js
 asyncForEach.js
+local/

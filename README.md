@@ -1,3 +1,3 @@
 Resource generator
 
-[generated resource file](./dev-tools-&-resources.md)
+[generated resource file](./output/dev-tools-&-resources.md)
