@@ -2,18 +2,30 @@
 
 /**
  * Improvements:
- * - implement error handling for no path provided to command
- * - setup debug option to show missing links
- * - setup folder depth limit option
- * - print tabs for each sub level
- * - write title  of folder with path to it
- * - order links by alphabetical order? find why capital letters come first..?
- * - find possible errors in file path handling
- * - fix html character entity conversion at link retrieval?
- * - write README.md: installation, supported file types, etc.
- * - make it a CLI npm package to install globally (can use https://github.com/yargs/yargs)
- * - change index.js to cli.js + run $ chmod +x cli.js + npm link
- * - fill in package.json https://docs.npmjs.com/files/package.json#bin
+ *
+ * 1. Code refractor (software logic)
+ *
+ * 2. Implement options:
+ *   - debug option to show missing links
+ *   - folder depth limit option
+ *
+ * 3. md Rendering:
+ *   - write title  of folder with path to it
+ *   - print tabs for each sub level
+ *   - order links by alphabetical order? find why capital letters come first..?
+ *
+ * 4. Error handling:
+ *   - for no path provided to command
+ *   - find possible errors in file path handling
+ *
+ * 5. Fixes:
+ *  - fix html character entity conversion at link retrieval?
+ *
+ * 6. Write README.md: installation, supported file types, etc.
+ *
+ * 7. Make it a CLI npm package to install globally (can use https://github.com/yargs/yargs)
+ *  - change index.js to cli.js + run $ chmod +x cli.js + npm link
+ *  - fill in package.json https://docs.npmjs.com/files/package.json#bin
  *
  * Publishing:
  * - generate .md on github
@@ -37,6 +49,7 @@ outputFileName = "research"; // debug
 // dirpath = "/Users/vincentreynaud/Desktop/FILES/WORK/1\ Production/1\ COLLECTIVE\ ANXIETY/2\ Research/2\ Anthropocène"; // debug
 // prettier-ignore
 dirpath = "/Users/vincentreynaud/Desktop/FILES/WORK/1\ Production/1\ COLLECTIVE\ ANXIETY/2\ Research/"; // debug
+dirpath = "/Users/vincentreynaud/Dropbox/Development DCI/tools-&-resources";
 
 const outputFile = `output/${outputFileName}.md`;
 
