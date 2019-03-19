@@ -81,6 +81,22 @@ https://regex101.com/
 https://regexone.com/  
 https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions/  
 
+## _test 
+https://nowhosting.net/  
+https://medium.com/@RockChalkDev/deploying-with-zeits-now-cli-796e41f05102  
+
+### Untitled folder 
+https://signup.heroku.com/?c=70130000000NcJNAA0&amp;utm_source=bing&amp;utm_medium=cpc&amp;utm_campaign=SEM%20-%20US%20-%20Bing%20-%20Search%20-%20Branded%20-%20EXT%20-%20Desktop%20-%20All&amp;utm_term=heroku&amp;utm_content=General  
+
+#### Untitled folder 
+https://all-inkl.com/  
+
+##### Untitled folder 
+https://jenkins.io/  
+
+###### Untitled folder 
+https://zeit.co/now  
+
 ## _utilities 
 https://caniuse.com/#comparison  
 https://chmod-calculator.com/  

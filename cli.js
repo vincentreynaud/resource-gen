@@ -6,8 +6,6 @@
  * 1. Code refractor (software logic)
  *
  * 2. Implement options:
- *   - debug option to show missing links
- *   - folder depth limit option
  *   - file description option
  *
  * 3. Write README.md: installation, supported file types, etc.
