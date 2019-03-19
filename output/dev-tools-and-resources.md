@@ -1,5 +1,5 @@
 
-# Tools & resources 
+# Tools and resources 
 https://github.com/vincentreynaud/resource-generator/blob/master/dev-tools-&amp;-resources.md  
 
 ## _docs 
@@ -12,10 +12,19 @@ https://webdev-curriculum.com/mdn-attribution.php
 https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q?reload=9  
 https://www.safaribooksonline.com/search/?query=javascript&extended_publisher_data=true&highlight=true&is_academic_institution_account=false&source=user&include_assessments=false&include_case_studies=true&include_courses=true&include_orioles=true&include_playlists=true&sort=publication_date  
 
-**Missing links at**  
-the-perfect-wordpress-development-workflow.pdf  
+### Git 
+https://gitexplorer.com/?ref=producthunt  
 
-### JS libraries 
+#### Gitignore 
+https://github.com/github/gitignore  
+
+### GraphQL 
+https://www.howtographql.com/basics/2-core-concepts/  
+https://graphql.org/learn/  
+https://www.prisma.io/  
+https://date-fns.org/docs/Getting-Started  
+
+### Js libraries 
 http://bootboxjs.com/  
 https://www.dropzonejs.com/  
 http://dynamicsjs.com/  
@@ -26,7 +35,9 @@ https://momentjs.com/
 https://www.typescriptlang.org/  
 
 ### Node JS 
+https://codeburst.io/fractal-a-nodejs-app-structure-for-infinite-scale-d74dda57ee11  
 https://jsonplaceholder.typicode.com/  
+https://github.com/i0natan/nodebestpractices  
 
 #### RESTful API design 
 https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4  
@@ -38,15 +49,18 @@ https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d
 #### Authentication 
 https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec  
 https://en.wikipedia.org/wiki/JSON_Web_Token#Standard_fields  
+https://jwt.io/  
 https://medium.com/@wdevon99/what-the-hell-is-oauth-6ba19f236612  
 https://cdn.auth0.com/content/jwt/jwt-diagram.png  
 https://jwt.io/  
+https://softwareengineering.stackexchange.com/questions/318768/is-this-a-correct-jwt-authentication-implementation  
 
 #### Cli apps 
 https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e  
 https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/  
 
 #### Contact form 
+https://forestry.io/blog/5-ways-to-handle-forms-on-your-static-site/  
 https://formspree.io/#setup  
 https://tylerkrys.ca/blog/adding-nodemailer-email-contact-form-node-express-app  
 https://hackernoon.com/setting-up-a-serverless-contact-form-in-react-using-nodemailer-and-express-19df9fdb20ed  
@@ -59,6 +73,13 @@ https://scotch.io/tutorials/scraping-the-web-with-node-js
 ### React libraries 
 https://preactjs.com/  
 https://reactstrap.github.io/  
+
+### Regex 
+https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149  
+https://ryanstutorials.net/regular-expressions-tutorial/regular-expressions-basics.php  
+https://regex101.com/  
+https://regexone.com/  
+https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions/  
 
 ## _utilities 
 https://caniuse.com/#comparison  
@@ -93,12 +114,9 @@ https://animejs.com/
 ### Dynamic page 
 https://css-tricks.com/rethinking-dynamic-page-replacing-content/  
 
-## Api 
+## API 
 https://en.wikipedia.org/wiki/Representational_state_transfer  
 https://www.google.com/search?client=firefox-b-ab&amp;q=rest+api  
-
-## Authentication 
-https://jwt.io/  
 
 ## Bug fixes 
 https://denverdias.com/2014/11/19/bootstrap-scrollspy-tips/  
@@ -128,7 +146,7 @@ https://css-tricks.com/easing-linear-gradients/
 https://www.pexels.com/  
 https://www.toptal.com/designers/subtlepatterns/  
 
-## Cors 
+## CORS 
 https://cors-anywhere.dominik-hanke.de/  
 
 ## Cron 
@@ -197,17 +215,6 @@ https://transfonter.org/formats
 https://jsonformatter.curiousconcept.com/#  
 https://tinypng.com/  
 
-## Git 
-https://gitexplorer.com/?ref=producthunt  
-
-### Gitignore 
-https://github.com/github/gitignore  
-
-## Graphql 
-https://www.howtographql.com/basics/2-core-concepts/  
-https://graphql.org/learn/  
-https://date-fns.org/docs/Getting-Started  
-
 ## Helpers 
 https://gomakethings.com/2018/01/11/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/  
 
@@ -244,13 +251,6 @@ https://css-tricks.com/the-trick-to-viewport-units-on-mobile/#article-header-id-
 https://github.com/toddmotto/public-apis  
 https://www.govdata.de/  
 https://daten.berlin.de/  
-
-## Regex 
-https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149  
-https://ryanstutorials.net/regular-expressions-tutorial/regular-expressions-basics.php  
-https://regex101.com/  
-https://regexone.com/  
-https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions/  
 
 ## Responsive 
 http://cssmediaqueries.com/  
@@ -298,8 +298,9 @@ https://github.com/FBW-10/minimalistic-portfolio-static-site-generator
 https://softwareengineeringdaily.com/2017/08/17/gatsbyjs-with-kyle-mathews/  
 https://www.gatsbyjs.org/  
 https://www.gatsbyjs.org/blog/2018-12-19-kentico-cloud-and-gatsby-take-you-beyond-static-websites/  
+https://www.gatsbyjs.org/docs/using-graphql-playground/  
 
-## Svg 
+## SVG 
 https://css-tricks.com/a-complete-guide-to-svg-fallbacks/  
 https://css-tricks.com/lodge/svg/  
 
@@ -313,7 +314,7 @@ https://pughtml.com/
 ## Trademark 
 https://www.dpma.de/english/search/dpmaregister/index.html  
 
-## Web audio api 
+## Web audio API 
 https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio  
 https://css-tricks.com/introduction-web-audio-api/  
 
