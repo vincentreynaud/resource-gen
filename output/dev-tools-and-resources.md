@@ -1,6 +1,6 @@
 
 # Tools and resources 
-https://github.com/vincentreynaud/resource-generator/blob/master/dev-tools-&amp;-resources.md  
+Bookmark resource generated from /Users/vincentreynaud/Dropbox/Development DCI/tools-and-resources  
 
 ## _docs 
 https://caniuse.com/#  
@@ -11,6 +11,12 @@ https://webdev-curriculum.com/mdn-attribution.php
 ## _learning 
 https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q?reload=9  
 https://www.safaribooksonline.com/search/?query=javascript&extended_publisher_data=true&highlight=true&is_academic_institution_account=false&source=user&include_assessments=false&include_case_studies=true&include_courses=true&include_orioles=true&include_playlists=true&sort=publication_date  
+
+## _snippets 
+
+### Self built css grid 
+
+## _technologies 
 
 ### Git 
 https://gitexplorer.com/?ref=producthunt  
@@ -80,22 +86,6 @@ https://ryanstutorials.net/regular-expressions-tutorial/regular-expressions-basi
 https://regex101.com/  
 https://regexone.com/  
 https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions/  
-
-## _test 
-https://nowhosting.net/  
-https://medium.com/@RockChalkDev/deploying-with-zeits-now-cli-796e41f05102  
-
-### Untitled folder 
-https://signup.heroku.com/?c=70130000000NcJNAA0&amp;utm_source=bing&amp;utm_medium=cpc&amp;utm_campaign=SEM%20-%20US%20-%20Bing%20-%20Search%20-%20Branded%20-%20EXT%20-%20Desktop%20-%20All&amp;utm_term=heroku&amp;utm_content=General  
-
-#### Untitled folder 
-https://all-inkl.com/  
-
-##### Untitled folder 
-https://jenkins.io/  
-
-###### Untitled folder 
-https://zeit.co/now  
 
 ## _utilities 
 https://caniuse.com/#comparison  
@@ -240,6 +230,10 @@ https://material.io/tools/icons/?style=baseline
 https://ionicons.com/  
 https://thenounproject.com/  
 https://icon.now.sh/  
+
+### Devicon master 
+
+#### Icons 
 
 ## Lists 
 http://css.maxdesign.com.au/listamatic/  
