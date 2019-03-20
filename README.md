@@ -5,6 +5,7 @@ screenshot of folder structure
 
 ### options
 
-folderDepth:
+folderDepth: Number
+ignore: [String]
 
 The generator will print folder names if folder contains subfolders but no link. might lead to printing empty sections.

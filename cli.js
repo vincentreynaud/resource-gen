@@ -3,9 +3,11 @@
 /**
  * Improvements:
  *
- * 1. Code refractor (software logic)
+ * 1. Code refractor (software logic):
+ *   - draw a shema of the program's logic
  *
- * 2. Implement options:
+ * 2. Features:
+ *   - find how to generate resource from chrome/firefox favorites
  *   - file description option
  *   - folder ignore option
  *
@@ -41,9 +43,6 @@ const [, , outputFileName, dirpath, ...options] = process.argv;
 
 // prettier-ignore
 // npm start dev-tools-and-resources /Users/vincentreynaud/Dropbox/Development\ DCI/tools-and-resources
-
-// prettier-ignore
-// dirpath = "/Users/vincentreynaud/Desktop/FILES/WORK/1\ Production/1\ COLLECTIVE\ ANXIETY/2\ Research/";
 
 const outputFile = `output/${outputFileName}.md`;
 

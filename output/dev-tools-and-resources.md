@@ -12,7 +12,7 @@ https://webdev-curriculum.com/mdn-attribution.php
 https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q?reload=9  
 https://www.safaribooksonline.com/search/?query=javascript&extended_publisher_data=true&highlight=true&is_academic_institution_account=false&source=user&include_assessments=false&include_case_studies=true&include_courses=true&include_orioles=true&include_playlists=true&sort=publication_date  
 
-## _snippets 
+## _snippets  
 
 ### Self built css grid 
 
@@ -225,15 +225,12 @@ https://tinypng.com/
 https://gomakethings.com/2018/01/11/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/  
 
 ## Icons 
+https://konpa.github.io/devicon/  
 https://feathericons.com/  
 https://material.io/tools/icons/?style=baseline  
 https://ionicons.com/  
 https://thenounproject.com/  
 https://icon.now.sh/  
-
-### Devicon master 
-
-#### Icons 
 
 ## Lists 
 http://css.maxdesign.com.au/listamatic/  
