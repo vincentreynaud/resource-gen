@@ -7,6 +7,7 @@
  *
  * 2. Implement options:
  *   - file description option
+ *   - folder ignore option
  *
  * 3. Write README.md: installation, supported file types, etc.
  *   - list of unhhandled filepaths
@@ -20,8 +21,7 @@
  *   - for no path provided to command
  *   - find possible errors in file path handling
  *
- * 6. Fixes:
- *  - fix html character entity conversion at link retrieval?
+ * 6. Fixes: none
  *
  * 7. Make it a CLI npm package to install globally (can use https://github.com/yargs/yargs)
  *  - change index.js to cli.js + run $ chmod +x cli.js + npm link
@@ -48,7 +48,7 @@ const [, , outputFileName, dirpath, ...options] = process.argv;
 const outputFile = `output/${outputFileName}.md`;
 
 try {
-  print(outputFile, dirpath);
+  print(outputFile, dirpath, options);
 } catch (error) {
   console.error(error);
 }
