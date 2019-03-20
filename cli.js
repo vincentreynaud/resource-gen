@@ -15,7 +15,6 @@
  *   - list of unhhandled filepaths
  *
  * 4. md Rendering:
- *   - write title of folder with path to it
  *   - print tabs for each sub level
  *   - order links by alphabetical order? find why capital letters come first..?
  *
@@ -25,14 +24,10 @@
  *
  * 6. Fixes: none
  *
- * 7. Make it a CLI npm package to install globally (can use https://github.com/yargs/yargs)
+ * 7. Make it a CLI npm package to install globally
  *  - change index.js to cli.js + run $ chmod +x cli.js + npm link
  *  - fill in package.json https://docs.npmjs.com/files/package.json#bin
- *
- * Publishing:
- * - generate .md on github
- * - update every X
- * - host with now
+ *  - generate resource every x to keep folder changes updated. server + now
  *
  */
 
