@@ -1,49 +1,66 @@
 # Bookmark Resource Generator
 
-screenshot of folder structure  
-[generated resource file](./output/dev-tools-and-resources.md)
+Bookmark Resource Generator is a CLI utility to parse webloc and browser-printed pdf files of the MacOS folder system into a comprehensive list of links in Markdown.
 
-### options
+![Folder structure screenshot](./folder-structure-screenshot.png)
+--> Check out the [generated Resource File](./output/dev-tools-and-resources.md)
 
-folderDepth: Number
-ignore: [String]
+## Installation
+
+## Usage
+
+```
+Usage: cli.js <output-file> <directory-path> [options]
+
+Commands:
+  cli.js <output-file> <directory-path>     Define the output file name and the
+  [options]                                 directory to crawl
+
+Options:
+  --version          Show version number                               [boolean]
+  --depth, -d        Max sub-directory depth to search                 [number]
+  --ignore, -i       Ignore folders in your parent directory           [array]
+  --description, -t  Describe the resource you are generating          [string]
+  --help             Show help                                         [boolean]
+
+Examples:
+  cli.js tools-and-resources /Users/myusername/Development/tools-and-resources -d 5 -i 'snippets' 'my-dev-project'
+```
 
 The generator will print folder names if folder contains subfolders but no link. might lead to printing empty sections.
 
+## Supported file formats
+
 ## Improvements
 
-1. Code refractor (software logic):
+### 1. Code refractor
 
-- draw a shema of the program's logic
+- draw shema of the program's logic
 
-2. Features:
+### 2. Features
 
-- implement yargs
 - find how to generate resource from chrome/firefox favorites
-- file description option
-- folder ignore option
 
-3. Write README.md: installation, supported file types, etc.
+### 3. Documentation
 
+- Write README.md: installation, usage, supported file types, etc.
 - list of unhhandled filepaths
 
-4. md Rendering:
+### 4. File rendering
 
 - write title of folder with path to it
 - print tabs for each sub level
 - order links by alphabetical order? find why capital letters come first..?
 
-5. Error handling:
+### 5. Error handling
 
 - for no path provided to command
 - find possible errors in file path handling
 
-6. Fixes: none
-
-7. Make it a CLI npm package to install globally
+### 6. Make program a CLI npm package to install globally
 
 - change index.js to cli.js + run \$ chmod +x cli.js + npm link
-- fill in package.json https://docs.npmjs.com/files/package.json#bin
+- fill out package.json https://docs.npmjs.com/files/package.json#bin
 
 ## Publishing
 
@@ -53,4 +70,6 @@ The generator will print folder names if folder contains subfolders but no link.
 
 ## Bugs
 
-https://docs.npmjs.com/cli/run-script
+issue with calling predefined npm scripts:  
+https://docs.npmjs.com/cli/run-script  
+need to use `npm run gen --`
