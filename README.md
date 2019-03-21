@@ -50,3 +50,7 @@ The generator will print folder names if folder contains subfolders but no link.
 - generate .md on github
 - update every X
 - host with now
+
+## Bugs
+
+https://docs.npmjs.com/cli/run-script

@@ -28,11 +28,8 @@ const argv = require("yargs")
   .help().argv;
 // .boolean('v') if flag used returns true
 
-console.dir(argv);
-
 const outputFileName = argv._[0];
 const dirpath = argv._[1];
-
 const options = {};
 options.folderDepth = argv.depth;
 options.ignore = argv.ignore;
@@ -40,7 +37,7 @@ options.ignore = argv.ignore;
 console.log(outputFileName, dirpath, options);
 
 // prettier-ignore
-// npm start dev-tools-and-resources /Users/vincentreynaud/Dropbox/Development\ DCI/tools-and-resources
+// npm run gen -- dev-tools-and-resources /Users/vincentreynaud/Dropbox/Development\ DCI/tools-and-resources
 
 const print = require("./lib/print");
 // const outputFile = `output/${outputFileName}.md`;
