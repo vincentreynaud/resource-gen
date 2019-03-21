@@ -17,11 +17,11 @@ Usage: cli.js <output-file> <directory-path> [options]
 
 Commands:
   cli.js <output-file> <directory-path>     Define the output file name and the
-  [options]                                 directory to crawl
+  [options]                                 base directory to crawl
 
 Options:
   --version          Show version number                               [boolean]
-  --depth, -d        Max sub-directory depth to crawl into             [number]
+  --depth, -d        Max sub-directory depth to search into            [number]
   --ignore, -i       Ignore folders in the base and sub-directories    [array]
   --description, -t  Describe the generated resource                   [string]
   --help             Show help                                         [boolean]
