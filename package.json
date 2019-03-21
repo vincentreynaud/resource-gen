@@ -26,7 +26,8 @@
   "dependencies": {
     "file-system": "^2.2.2",
     "path": "^0.12.7",
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "yargs": "^13.2.2"
   },
   "devDependencies": {
     "jsdoc-to-markdown": "^4.0.1"
