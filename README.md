@@ -54,7 +54,6 @@ The generator will print folder names if folder contains subfolders but no link.
 
 ### 5. Error handling
 
-- test yargs errors
 - for no path provided to command
 - find possible errors in file path handling
 
