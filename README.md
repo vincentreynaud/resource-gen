@@ -1,9 +1,9 @@
 # Bookmark Resource Generator
 
-Bookmark Resource Generator is a CLI utility to parse webloc and browser-printed pdf files of the MacOS folder system into a comprehensive list of links in Markdown.
+Bookmark Resource Generator is a CLI utility to parse webloc and browser-printed pdf files of the MacOS folder system into a comprehensive list of links in Markdown.  
+--> Find here an [Example generated resource file](./output/dev-tools-and-resources.md)
 
 ![Folder structure screenshot](./folder-structure-screenshot.png)
---> Check out the [generated Resource File](./output/dev-tools-and-resources.md)
 
 ## Installation
 
