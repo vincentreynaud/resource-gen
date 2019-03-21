@@ -6,8 +6,12 @@
   "keywords": [
     "markdown",
     "file-system",
+    "bookmark",
     "resource",
-    "web-links",
+    "web-link",
+    "url",
+    "parse",
+    "link",
     "generator"
   ],
   "repository": {
@@ -17,8 +21,8 @@
   "license": "MIT",
   "main": "cli.js",
   "scripts": {
-    "start": "node cli.js",
-    "test": "node tests.js"
+    "test": "node tests.js",
+    "gen": "node cli.js"
   },
   "bin": {
     "resource-gen": "./cli.js"
@@ -26,7 +30,8 @@
   "dependencies": {
     "file-system": "^2.2.2",
     "path": "^0.12.7",
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "yargs": "^13.2.2"
   },
   "devDependencies": {
     "jsdoc-to-markdown": "^4.0.1"

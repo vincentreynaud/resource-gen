@@ -1,5 +1,6 @@
 
 # Tools and resources 
+Bookmarks for Web Development  
 Bookmark resource generated from /Users/vincentreynaud/Dropbox/Development DCI/tools-and-resources  
 
 ## _docs 
@@ -11,10 +12,6 @@ https://webdev-curriculum.com/mdn-attribution.php
 ## _learning 
 https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q?reload=9  
 https://www.safaribooksonline.com/search/?query=javascript&extended_publisher_data=true&highlight=true&is_academic_institution_account=false&source=user&include_assessments=false&include_case_studies=true&include_courses=true&include_orioles=true&include_playlists=true&sort=publication_date  
-
-## _snippets  
-
-### Self built css grid 
 
 ## _technologies 
 
@@ -44,6 +41,7 @@ https://www.typescriptlang.org/
 https://codeburst.io/fractal-a-nodejs-app-structure-for-infinite-scale-d74dda57ee11  
 https://jsonplaceholder.typicode.com/  
 https://github.com/i0natan/nodebestpractices  
+http://yargs.js.org/  
 
 #### RESTful API design 
 https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4  
@@ -325,7 +323,7 @@ https://www.dpma.de/english/search/dpmaregister/index.html
 https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio  
 https://css-tricks.com/introduction-web-audio-api/  
 
-### Dig deeper 
+### Further 
 https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API  
 
 ## Web design 
