@@ -2,17 +2,18 @@
   "name": "bookmark-resource-generator",
   "version": "1.0.0",
   "author": "Vincent Reynaud <mail@vincentreynaud.de>",
-  "description": "Utility to parse webloc & browser-printed pdf files of folder system into a comprehensive list of links in markdown",
+  "description": "Utility to parse webloc & browser-printed pdf files into a comprehensive list of links in Markdown",
   "keywords": [
-    "markdown",
-    "file-system",
     "bookmark",
-    "resource",
+    "resource-manager",
+    "utility",
+    "file-system",
+    "markdown",
+    "nodejs",
     "web-link",
-    "url",
-    "parse",
     "link",
-    "generator"
+    "url",
+    "parse"
   ],
   "repository": {
     "type": "git",
@@ -32,8 +33,5 @@
     "path": "^0.12.7",
     "pdf-parse": "^1.1.1",
     "yargs": "^13.2.2"
-  },
-  "devDependencies": {
-    "jsdoc-to-markdown": "^4.0.1"
   }
 }
