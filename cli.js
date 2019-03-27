@@ -29,7 +29,15 @@ const argv = require("yargs")
     alias: "t",
     describe: "Describe the generated resource"
   })
-  .demandCommand(2, "Please provide least 2 arguments: <directory-path> <output-file>")
+  .option("log", {
+    type: "boolean",
+    alias: "l",
+    describe: "Create log file for errors in link retrieval"
+  })
+  .demandCommand(
+    2,
+    "Please provide least 2 arguments: <directory-path> <output-file-name>"
+  )
   .help().argv;
 
 const path = require("path");
@@ -41,6 +49,7 @@ const options = {};
 options.depth = argv.depth;
 options.ignore = argv.ignore;
 options.description = argv.description;
+options.log = argv.log;
 
 if (path.isAbsolute(dirpath) === false) dirpath = path.resolve(dirpath);
 const outputFile = `output/${outputFileName}.md`;
