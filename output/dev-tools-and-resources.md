@@ -1,6 +1,6 @@
 
 # Tools and resources 
-Web Development Bookmarks  
+Useful Web Development Links   
 Resource generated from /Users/vincentreynaud/Dropbox/Development DCI/tools-and-resources  
 
 ## _docs 
@@ -21,8 +21,7 @@ http://enjoycss.com/
 
 ### Git 
 https://gitexplorer.com/?ref=producthunt  
-
-#### Gitignore 
+https://medium.freecodecamp.org/git-rebase-and-the-golden-rule-explained-70715eccc372  
 https://github.com/github/gitignore  
 
 ### GraphQL 
@@ -47,6 +46,13 @@ https://jsonplaceholder.typicode.com/
 https://github.com/i0natan/nodebestpractices  
 http://yargs.js.org/  
 
+#### CLI apps 
+https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e  
+https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/  
+https://semver.org/  
+https://medium.com/@alexishevia/the-magic-behind-npm-link-d94dcb3a81af  
+https://hackernoon.com/how-to-publish-your-package-on-npm-7fc1f5aae600  
+
 #### RESTful API design 
 https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4  
 https://medium.com/@jeffandersen/building-a-node-js-rest-api-with-express-46b0901f29b6  
@@ -62,10 +68,6 @@ https://medium.com/@wdevon99/what-the-hell-is-oauth-6ba19f236612
 https://cdn.auth0.com/content/jwt/jwt-diagram.png  
 https://jwt.io/  
 https://softwareengineering.stackexchange.com/questions/318768/is-this-a-correct-jwt-authentication-implementation  
-
-#### Cli apps 
-https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e  
-https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/  
 
 #### Contact form 
 https://forestry.io/blog/5-ways-to-handle-forms-on-your-static-site/  
@@ -113,6 +115,7 @@ https://www.carbonads.net/
 
 ## Animations 
 https://www.creativebloq.com/inspiration/css-animation-examples  
+https://michalsnik.github.io/aos/  
 https://daneden.github.io/animate.css/  
 http://animista.net/  
 https://css-tricks.com/controlling-css-animations-transitions-javascript/  
@@ -127,9 +130,15 @@ https://en.wikipedia.org/wiki/Representational_state_transfer
 https://www.google.com/search?client=firefox-b-ab&amp;q=rest+api  
 
 ## Bug fixes 
+https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities  
 https://denverdias.com/2014/11/19/bootstrap-scrollspy-tips/  
 https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-will-change-property/  
 https://medium.com/vehikl-news/fixed-background-image-performance-issue-6b7d9e2dbc55  
+
+### Gatsby 
+https://github.com/gatsbyjs/gatsby/issues/12744  
+https://github.com/gatsbyjs/gatsby/issues/7377  
+https://github.com/gatsbyjs/gatsby/issues/10115  
 
 ## Char encoding 
 https://www.toptal.com/designers/htmlarrows/  
@@ -167,6 +176,7 @@ https://www.npmjs.com/package/lowdb
 https://www.wbs-law.de/it-recht/datenschutzrecht/datenschutzerklaerung-generator/  
 
 ## Deployment hosting 
+https://www.arweave.org/  
 https://nowhosting.net/  
 https://medium.com/@RockChalkDev/deploying-with-zeits-now-cli-796e41f05102  
 https://all-inkl.com/  
@@ -224,6 +234,10 @@ https://ionicons.com/
 https://thenounproject.com/  
 https://icon.now.sh/  
 
+## Images 
+https://trianglify.io/  
+https://snorpey.github.io/triangulation/  
+
 ## Lists 
 http://css.maxdesign.com.au/listamatic/  
 
@@ -254,6 +268,7 @@ https://daten.berlin.de/
 ## Responsive 
 http://cssmediaqueries.com/  
 https://css-tricks.com/snippets/css/media-queries-for-standard-devices/  
+https://css-tricks.com/the-trick-to-viewport-units-on-mobile/  
 
 ### Images 
 https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/  
@@ -294,6 +309,7 @@ https://www.webdevdrops.com/build-static-site-generator-nodejs-8969ebe34b22/
 https://github.com/FBW-10/minimalistic-portfolio-static-site-generator  
 
 ### Gatsby 
+https://jenniferwadella.com/blog/all-the-dumb-mistakes-i-made-building-my-first-gatsby-site  
 https://softwareengineeringdaily.com/2017/08/17/gatsbyjs-with-kyle-mathews/  
 https://www.gatsbyjs.org/  
 https://www.gatsbyjs.org/blog/2018-12-19-kentico-cloud-and-gatsby-take-you-beyond-static-websites/  
