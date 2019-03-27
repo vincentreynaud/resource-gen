@@ -38,6 +38,11 @@
     "pdf-parse": "^1.1.1",
     "yargs": "^13.2.2"
   },
-  "engines": { "node": ">=11.4.0"},
-  "os": ["darwin", "linux"]
+  "engines": {
+    "node": ">=11.4.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ]
 }
