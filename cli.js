@@ -32,15 +32,19 @@ const argv = require("yargs")
   .demandCommand(2, "Please provide least 2 arguments: <directory-path> <output-file>")
   .help().argv;
 
-const dirpath = argv._[0];
+const path = require("path");
+const print = require("./lib/print");
+
+let dirpath = argv._[0];
 const outputFileName = argv._[1];
 const options = {};
 options.depth = argv.depth;
 options.ignore = argv.ignore;
 options.description = argv.description;
 
-const print = require("./lib/print");
+if (path.isAbsolute(dirpath) === false) dirpath = path.resolve(dirpath);
 const outputFile = `output/${outputFileName}.md`;
+// const outputFile = path.join(dirpath, `${outputFileName}.md`);
 
 try {
   print(outputFile, dirpath, options);
