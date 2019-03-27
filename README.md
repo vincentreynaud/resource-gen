@@ -10,9 +10,9 @@ This utility allows you to render your research folders into a single resource f
 
 ## Installation
 
-**Note: Release on npm coming soon...**
+### Release on npm coming soon...
 
-Bookmark Resource Generator supports MacOS. Future improvements will implement support for Linux (see #4 in [issues](https://github.com/vincentreynaud/bookmark-resource-generator/issues)) 
+Note: Bookmark Resource Generator supports MacOS. Future improvements will implement support for Linux (see #4 in [issues](https://github.com/vincentreynaud/bookmark-resource-generator/issues)) 
 
 Install `resource-gen` CLI globally: 
 

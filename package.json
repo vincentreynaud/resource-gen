@@ -26,7 +26,7 @@
   "main": "cli.js",
   "scripts": {
     "gen": "node cli.js",
-    "test": "node tests.js",
+    "test": "resource-gen '/Users/vincentreynaud/Dropbox/Development DCI/tools-and-resources' dev-tools-and-resources --i _snippets liked -t 'Useful Web Development Links'",
     "pre-publish": "npm run lint && npm run test && npm run gen --"
   },
   "bin": {

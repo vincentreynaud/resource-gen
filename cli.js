@@ -3,13 +3,13 @@
 "use strict";
 
 const argv = require("yargs")
-  .usage("Usage: $0 <output-file> <directory-path> [options]")
+  .usage("Usage: $0 <directory-path> <output-file> [options]")
   .example(
     "$0 tools-and-resources /Users/myusername/Development/tools-and-resources --depth 3 --ignore 'code-snippets'"
   )
   .command({
-    command: "<output-file> <directory-path> [options]",
-    desc: "Define the output file name and the base directory to crawl"
+    command: "<directory-path> <output-file> [options]",
+    desc: "Specify the directory to crawl and the output file name"
   })
   .option("depth", {
     type: "number",
@@ -31,9 +31,6 @@ const argv = require("yargs")
   })
   .demandCommand(2, "Please provide least 2 arguments: <directory-path> <output-file>")
   .help().argv;
-// .boolean('v') if flag used returns true
-
-// change arguments order
 
 const dirpath = argv._[0];
 const outputFileName = argv._[1];
@@ -41,9 +38,6 @@ const options = {};
 options.depth = argv.depth;
 options.ignore = argv.ignore;
 options.description = argv.description;
-
-// prettier-ignore
-// Run command: npm run gen -- "/Users/vincentreynaud/Dropbox/Development\ DCI/tools-and-resources" dev-tools-and-resources --i _snippets liked -t "Web Development Bookmarks"
 
 const print = require("./lib/print");
 const outputFile = `output/${outputFileName}.md`;
