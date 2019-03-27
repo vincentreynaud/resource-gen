@@ -1,7 +1,7 @@
 
 # Tools and resources 
-Bookmarks for Web Development  
-Bookmark resource generated from /Users/vincentreynaud/Dropbox/Development DCI/tools-and-resources  
+Web Development Bookmarks  
+Resource generated from /Users/vincentreynaud/Dropbox/Development DCI/tools-and-resources  
 
 ## _docs 
 https://caniuse.com/#  
@@ -14,6 +14,10 @@ https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q?reload=9
 https://www.safaribooksonline.com/search/?query=javascript&extended_publisher_data=true&highlight=true&is_academic_institution_account=false&source=user&include_assessments=false&include_case_studies=true&include_courses=true&include_orioles=true&include_playlists=true&sort=publication_date  
 
 ## _technologies 
+
+### CSS 
+https://css-tricks.com/loops-css-preprocessors/  
+http://enjoycss.com/  
 
 ### Git 
 https://gitexplorer.com/?ref=producthunt  
@@ -156,9 +160,6 @@ https://cors-anywhere.dominik-hanke.de/
 ## Cron 
 https://crontab.guru/  
 
-## Css generator 
-http://enjoycss.com/  
-
 ## Databases 
 https://www.npmjs.com/package/lowdb  
 
@@ -197,13 +198,6 @@ https://www.typesample.com/jennyheintz
 https://playtype.com/about/typefaces/glossary  
 https://vintagetype.co/  
 https://google-webfonts-helper.herokuapp.com/fonts/exo?subsets=latin  
-
-### Liked 
-https://www.typewolf.com/site-of-the-day/fonts/atlas-grotesk  
-https://www.colophon-foundry.org/typefaces/reader/  
-https://www.fonts.com/font/dstype-foundry/musee?QueryFontType=Web&amp;src=GoogleWebFonts  
-https://www.fonts.com/font/exljbris/museo-sans-rounded?QueryFontType=Web&amp;src=GoogleWebFonts  
-https://www.fonts.com/font/exljbris/museo-sans?QueryFontType=Web&amp;src=GoogleWebFonts  
 
 ### Shop 
 https://www.colophon-foundry.org/typefaces/  
