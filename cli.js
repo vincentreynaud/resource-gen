@@ -3,20 +3,20 @@
 "use strict";
 
 const argv = require("yargs")
-  .usage("Usage: $0 <directory-path> <output-file> [options]")
+  .usage("Usage: $0 <directory-path> <output-file-name> [options]")
   .example(
     "$0 tools-and-resources /Users/myusername/Development/tools-and-resources --depth 3 --ignore 'code-snippets'"
   )
   .command({
-    command: "<directory-path> <output-file> [options]",
+    command: "<directory-path> <output-file-name> [options]",
     desc: "Specify the directory to crawl and the output file name"
   })
   .option("depth", {
     type: "number",
     alias: "d",
     describe: "Max sub-directory depth to search into",
-    choices: [1, 2, 3, 4, 6, 7],
-    default: 7
+    choices: [1, 2, 3, 4, 5, 6],
+    default: 5
   })
   .option("ignore", {
     type: "array",

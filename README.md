@@ -22,15 +22,19 @@ npm install -g bookmark-resource-generator
 
 ## Usage
 
-Bookmark Resource Generator will crawl into the directory tree, strating from the input directory, and retrieve links it finds in files such as `webloc` and `pdf`. The directory tree is translated into a headings/subheadings hierarchy: The base directory name is printed as h1, its sub-directories as h2, and so on and so forth.
+Bookmark Resource Generator will crawl into the directory tree, strating from the input directory, and retrieve links found in files such as `webloc` and `pdf`. The tree is translated into a headings/subheadings hierarchy: The base directory name is printed as h1, its sub-directories as h2, and so on and so forth.
+
+The generated markdown will be output in the crawled directory. Using the `--log` option, you can additionally output a log file to check if there were missing or incomplete links found during the crawl.
 
 ### Command 
 
 Specify the directory to crawl and the output file name:
 
 ```
-resource-gen <directory-path> <output-file> [options]
+resource-gen <directory-path> <output-file-name> [options]
 ``` 
+
+If you want to crawl within the current working directory, pass the relative path `.` as directory path.
 
 
 ### Example  
@@ -43,8 +47,9 @@ resource-gen tools-and-resources /Users/myusername/Development/tools-and-resourc
 | Option           | Shortcut | Description                                     | Type     |
 | ---------------- | -------- | ----------------------------------------------- | -------- |
 | `--depth`        | `-d`     | Max sub-directory depth to search into          | Number   |
-| `--ignore`       | `-i`     | Ignore folders in the base- and sub-directories  | Array    |
+| `--ignore`       | `-i`     | Ignore folders in the base- and sub-directories | Array    |
 | `--description`  | `-t`     | Describe the generated resource                 | String   |
+| `--log`          | `-l`     | Create log file for errors in link retrieval    | Boolean  |
 | `--version`      |          | Show version number                             | Boolean  |
 | `--help`         |          | Show help                                       | Boolean  |
 
@@ -62,6 +67,8 @@ Bookmark Resource Generator will retrieve urls form the following file formats:
 | `.webloc`  | MacOS file format for website shortcut.
 | `.desktop` | Linux file format for website shortcut. Note: The support was not tested on linux.
 | `.pdf`     | Files printed from Google Chrome, Firefox and Safari.
+
+resource-gen will ignore any other files present in your file system
 
 
 ## Contributions
