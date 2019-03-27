@@ -19,11 +19,15 @@
     "type": "git",
     "url": "https://github.com/vincentreynaud/bookmark-resource-generator.git"
   },
+  "bugs": {
+    "url": "https://github.com/vincentreynaud/bookmark-resource-generator/issues"
+  },
   "license": "MIT",
   "main": "cli.js",
   "scripts": {
+    "gen": "node cli.js",
     "test": "node tests.js",
-    "gen": "node cli.js"
+    "pre-publish": "npm run lint && npm run test && npm run gen --"
   },
   "bin": {
     "resource-gen": "./cli.js"
@@ -33,5 +37,7 @@
     "path": "^0.12.7",
     "pdf-parse": "^1.1.1",
     "yargs": "^13.2.2"
-  }
+  },
+  "engines": { "node": ">=11.4.0"},
+  "os": ["darwin", "linux"]
 }
