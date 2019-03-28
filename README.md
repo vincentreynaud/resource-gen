@@ -1,10 +1,10 @@
 # Bookmark Resource Generator
 
-Bookmark Resource Generator is a CLI utility to parse webloc and browser-printed pdf files of the file system into a comprehensive list of links in Markdown.
+Bookmark Resource Generator is a CLI utility to parse webloc and browser-printed pdf files of the file system into a comprehensive link inventory in Markdown.
 
-This utility allows you to render your research folders into a single resource file, which you can share with peer learners and researchers.
+This utility allows you to render your research folders into a reousource file which you can then share with peer colleagues, learners, researchers and the like.
 
-\>\> Check out the [example generated resource file](./output/dev-tools-and-resources.md)
+\>\> Check out the [Example generated Resource File](./output/dev-tools-and-resources.md)
 
 ![Directory tree screenshot](./directories.png)
 
@@ -12,7 +12,7 @@ This utility allows you to render your research folders into a single resource f
 
 ### Release on npm coming soon...
 
-**Note:** Bookmark Resource Generator supports MacOS. Future improvements will implement support for Linux
+**Note:** Bookmark Resource Generator was built on MacOS. Future improvements will implement support for Linux  
 (see #4 in [issues](https://github.com/vincentreynaud/bookmark-resource-generator/issues))
 
 Install `resource-gen` CLI globally:
@@ -23,52 +23,61 @@ npm install -g bookmark-resource-generator
 
 ## Usage
 
-Bookmark Resource Generator will crawl into the directory tree, strating from the input directory, and retrieve links found in files such as `webloc` and `pdf`. The tree is translated into a headings/subheadings hierarchy: The base directory name is printed as h1, its sub-directories as h2, and so on and so forth.
+`resource-gen` will crawl into the directory tree, strating from the input directory, and retrieve links found in files such as `webloc` and `pdf`. In Markdwon, The tree is rendered in a heading hierarchy: The base directory name is printed as h1, its sub-directories as h2, and so on and so forth.
 
-The generated markdown will be output in the crawled directory. Using the `--log` option, you can additionally output a log file to check if there were missing or incomplete links found during the crawl.
+The generated Markdown is output in the crawled directory. Using the `--log` option, you can additionally output a log file to check if there were failures to retrive links during crawl.
 
 ### Command
 
-Specify the directory to crawl and the output file name:
-
 ```
-resource-gen <directory-path> <output-file-name> [options]
+resource-gen <directory-path> [output-file-name] [options]
 ```
 
-If you want to crawl within the current working directory, pass the relative path `.` as directory path.
+Use the command `resource-gen` and specify the directory to crawl. If you want to crawl within the current working directory, use `.` to indicate your relative position. 
+
+By default the file name is set from the name of the input directory. Specify the file name as second argument if you prefer to set it yourself.
+
+
 
 ### Example
 
+Absolute path, no output file name: 
+
 ```
-resource-gen tools-and-resources /Users/myusername/Development/tools-and-resources --depth 3 --ignore 'code-snippets'
+resource-gen /Users/myusername/Development/tools-and-resources --depth 3 --ignore 'code-snippets'
+```
+
+Relative path, with output file name:
+
+```
+resource-gen ./tools-and-resources tools-and-resources --depth 3 --ignore 'code-snippets'
 ```
 
 ### Options
 
-| Option          | Shortcut | Description                                     | Type    |
-| :-------------- | :------- | :---------------------------------------------- | :------ |
-| `--depth`       | `-d`     | Max sub-directory depth to search into          | Number  |
-| `--ignore`      | `-i`     | Ignore folders in the base- and sub-directories | Array   |
-| `--description` | `-t`     | Describe the generated resource                 | String  |
-| `--log`         | `-l`     | Create log file for failure to retrieve link    | Boolean |
-| `--version`     |          | Show version number                             | Boolean |
-| `--help`        |          | Show help                                       | Boolean |
+| Long            | Short | Description                                     | Type    |
+| :-------------- | :---- | :---------------------------------------------- | :------ |
+| `--depth`       | `-d`  | Max sub-directory depth to search into          | Number  |
+| `--ignore`      | `-i`  | Ignore folders in the base- and sub-directories | Array   |
+| `--description` | `-t`  | Describe the generated resource                 | String  |
+| `--log`         | `-l`  | Create log file for failure to retrieve link    | Boolean |
+| `--version`     |       | Show version number                             | Boolean |
+| `--help`        |       | Show help                                       | Boolean |
 
-Bookmark Resource Generator crawls into the directory tree up to the 6th subfolder, use the `--depth` option to limit it to a smaller number.
+`resource-gen` crawls into the directory tree up to the 6th sub-folder. Use the `--depth` option to limit it to a smaller number. 
 
-The generator will render a directory name if the directory has sub-directories but no links, which leads to rendering empty sections. Use the `--ignore` option to avoid that.
+The program will render a directory name if the directory has sub-directories though no links, which may lead to rendering empty sections. Use the `--ignore` option to avoid that.
 
 ## Supported formats
 
-Bookmark Resource Generator will retrieve urls form the following file formats:
+Bookmark Resource Generator will retrieve urls form the following file formats, and will ignore any other files present in your file system.
 
 | Format     | Description                                                                        |
 | :--------- | :--------------------------------------------------------------------------------- |
 | `.webloc`  | MacOS file format for website shortcut.                                            |
-| `.desktop` | Linux file format for website shortcut. Note: The support was not tested on linux. |
+| `.desktop` | Linux file format for website shortcut. Note: Support on Linux not yet tested.     |
 | `.pdf`     | Files printed from Google Chrome, Firefox and Safari.                              |
 
-resource-gen will ignore any other files present in your file system
 
 ## Contributions
 
