@@ -41,28 +41,28 @@ By default the file name is set from the name of the input directory. Specify th
 
 ### Examples
 
-Absolute path, no output file name: 
+#### Absolute path, no output file name 
 
 ```
-resource-gen /Users/myusername/Development/tools-and-resources --depth 3 --ignore 'code-snippets'
+$ resource-gen /Users/myusername/Development/tools-and-resources --depth 3 --ignore 'code-snippets'
 ```
 ```
 // Output file: /Users/myusername/Development/tools-and-resources/tools-and-resources.md
 ```
 
-Relative path, with output file name:
+#### Relative path, with output file name
 
 ```
-resource-gen ./tools-and-resources custom-file-name --depth 3 --ignore 'code-snippets'
+$ resource-gen . custom-file-name --depth 3 --ignore 'code-snippets'
 ```
 ```
-// Output file: /path/to/current/directory/tools-and-resources/custom-file-name.md
+// Output file: /path/to/current/directory/custom-file-name.md
 ```
 
-Relative path, no output file name:
+#### Relative path, no output file name
 
 ```
-resource-gen .
+$ resource-gen .
 ```
 ```
 // Output file: /path/to/current/directory/<directory-name>.md
