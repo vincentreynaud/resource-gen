@@ -46,27 +46,22 @@ By default the file name is set from the name of the input directory. Specify th
 ```
 $ resource-gen /Users/myusername/Development/tools-and-resources --depth 3 --ignore 'code-snippets'
 ```
-```
-// Output file: /Users/myusername/Development/tools-and-resources/tools-and-resources.md
-```
+Outputs file to `/Users/myusername/Development/tools-and-resources/tools-and-resources.md`
 
 #### Relative path, with output file name
 
 ```
 $ resource-gen . custom-file-name --depth 3 --ignore 'code-snippets'
 ```
-```
-// Output file: /path/to/current/directory/custom-file-name.md
-```
+Outputs file to `/path/to/current/directory/custom-file-name.md`
+
 
 #### Relative path, no output file name
 
 ```
 $ resource-gen .
 ```
-```
-// Output file: /path/to/current/directory/<directory-name>.md
-```
+Outputs file to `/path/to/current/directory/<directory-name>.md`
 
 ### Options
 
