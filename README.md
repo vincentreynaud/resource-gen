@@ -33,24 +33,39 @@ The generated Markdown is output in the crawled directory. Using the `--log` opt
 resource-gen <directory-path> [output-file-name] [options]
 ```
 
-Use the command `resource-gen` and specify the directory to crawl. If you want to crawl within the current working directory, use `.` to indicate your relative position. 
+Use the command `resource-gen` and specify the directory to crawl. If you want to crawl within the current working directory, use `'.'` to indicate your relative position. 
 
 By default the file name is set from the name of the input directory. Specify the file name as second argument if you prefer to set it yourself.
 
 
 
-### Example
+### Examples
 
 Absolute path, no output file name: 
 
 ```
 resource-gen /Users/myusername/Development/tools-and-resources --depth 3 --ignore 'code-snippets'
 ```
+```
+// Output file: /Users/myusername/Development/tools-and-resources/tools-and-resources.md
+```
 
 Relative path, with output file name:
 
 ```
-resource-gen ./tools-and-resources tools-and-resources --depth 3 --ignore 'code-snippets'
+resource-gen ./tools-and-resources custom-file-name --depth 3 --ignore 'code-snippets'
+```
+```
+// Output file: /path/to/current/directory/tools-and-resources/custom-file-name.md
+```
+
+Relative path, no output file name:
+
+```
+resource-gen .
+```
+```
+// Output file: /path/to/current/directory/<directory-name>.md
 ```
 
 ### Options
