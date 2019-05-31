@@ -1,5 +1,7 @@
 # Bookmark Resource Generator
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vincentreynaud/resource-gen.svg)](https://greenkeeper.io/)
+
 Bookmark Resource Generator is a CLI utility to parse webloc and browser-printed pdf files of the file system into a comprehensive link inventory in Markdown.
 
 This utility allows you to render your research folders into a reousource file which you can then share with peer colleagues, learners, researchers and the like.
