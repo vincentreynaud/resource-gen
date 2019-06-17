@@ -1,19 +1,50 @@
 
 # Tools and resources 
-Useful Web Development Links   
+Useful Web Development Links  
 Resource generated from /Users/vincentreynaud/Dropbox/Development DCI/tools-and-resources  
 
-## _docs 
-https://caniuse.com/#  
-https://dev.w3.org/html5/html-author/charref  
-http://devdocs.io/  
-https://webdev-curriculum.com/mdn-attribution.php  
+## DOM events 
+https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android  
+https://www.html5rocks.com/en/mobile/touchandmouse/  
+https://stackoverflow.com/questions/33116397/scroll-direction-on-phone  
 
 ## _learning 
+https://eloquentjavascript.net/  
+https://frontendmasters.com/books/front-end-handbook/2019/  
 https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q?reload=9  
 https://www.safaribooksonline.com/search/?query=javascript&extended_publisher_data=true&highlight=true&is_academic_institution_account=false&source=user&include_assessments=false&include_case_studies=true&include_courses=true&include_orioles=true&include_playlists=true&sort=publication_date  
+https://softwareengineeringdaily.com/  
 
 ## _technologies 
+
+### AI 
+https://medium.com/towards-data-science/data-science/home  
+https://distill.pub/  
+https://openai.com/  
+https://ml5js.org/  
+https://docs.fast.ai/  
+
+#### TensorFlow 
+https://medium.com/tensorflow/introducing-tensorflow-js-machine-learning-in-javascript-bf3eab376db  
+https://www.tensorflow.org/  
+
+#### Bots 
+https://getleon.ai/  
+
+#### Concepts 
+https://en.wikipedia.org/wiki/Sentiment_analysis  
+https://en.wikipedia.org/wiki/Topic_model  
+
+#### Image 
+https://distill.pub/2019/activation-atlas/  
+
+#### NLP 
+https://openai.com/blog/better-language-models/#sample4  
+https://cloud.google.com/natural-language/  
+https://www.jovo.tech/  
+https://medium.com/@daffl/natural-language-processing-and-machine-learning-in-javascript-249181a3b721  
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API  
+https://spacy.io/  
 
 ### CSS 
 https://css-tricks.com/loops-css-preprocessors/  
@@ -23,6 +54,7 @@ http://enjoycss.com/
 https://gitexplorer.com/?ref=producthunt  
 https://medium.freecodecamp.org/git-rebase-and-the-golden-rule-explained-70715eccc372  
 https://github.com/github/gitignore  
+https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud  
 
 ### GraphQL 
 https://www.howtographql.com/basics/2-core-concepts/  
@@ -38,7 +70,17 @@ https://select2.org/
 https://lodash.com/  
 https://modernizr.com/docs/  
 https://momentjs.com/  
+
+#### TypeScript 
 https://www.typescriptlang.org/  
+https://www.youtube.com/watch?v=ahCwqrYpIuM  
+
+### Markdown 
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet  
+https://github.com/dcurtis/markdown-mark  
+
+### Native 
+https://flutter.dev/  
 
 ### Node JS 
 https://codeburst.io/fractal-a-nodejs-app-structure-for-infinite-scale-d74dda57ee11  
@@ -51,7 +93,7 @@ https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c216
 https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/  
 https://semver.org/  
 https://medium.com/@alexishevia/the-magic-behind-npm-link-d94dcb3a81af  
-https://hackernoon.com/how-to-publish-your-package-on-npm-7fc1f5aae600  
+https://docs.npmjs.com/misc/developers  
 
 #### RESTful API design 
 https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4  
@@ -59,6 +101,8 @@ https://medium.com/@jeffandersen/building-a-node-js-rest-api-with-express-46b090
 https://scotch.io/tutorials/keeping-api-routing-clean-using-express-routers  
 https://medium.com/hashmapinc/rest-good-practices-for-api-design-881439796dc9  
 https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9  
+https://en.wikipedia.org/wiki/Representational_state_transfer  
+https://www.google.com/search?client=firefox-b-ab&amp;q=rest+api  
 
 #### Authentication 
 https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec  
@@ -94,6 +138,7 @@ https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular
 ## _utilities 
 https://caniuse.com/#comparison  
 https://chmod-calculator.com/  
+https://greenkeeper.io/  
 http://keycode.info/  
 https://developers.google.com/speed/pagespeed/insights/  
 http://plnkr.co/  
@@ -107,27 +152,29 @@ https://tresorit.com/de?gclid=Cj0KCQjwvezZBRDkARIsADKQyPkw-owFLNRY2gw2ctbHnwWjir
 ## Accessibility 
 https://developers.google.com/web/fundamentals/accessibility/  
 http://out.easycounter.com/external/einfach-fuer-alle.de  
+https://medium.freecodecamp.org/how-to-design-website-layouts-for-screen-readers-347b7b06e9cc  
 https://www.w3.org/WAI/fundamentals/accessibility-intro/  
 https://eu.udacity.com/course/web-accessibility--ud891  
 
 ## Ads 
 https://www.carbonads.net/  
 
+## Analytics 
+https://matomo.org/  
+
 ## Animations 
 https://www.creativebloq.com/inspiration/css-animation-examples  
 https://michalsnik.github.io/aos/  
+https://css-tricks.com/aos-css-driven-scroll-animation-library/  
 https://daneden.github.io/animate.css/  
 http://animista.net/  
 https://css-tricks.com/controlling-css-animations-transitions-javascript/  
+https://codeburst.io/create-a-revealing-animation-with-anime-js-25a49bc98cd7  
 http://dynamicsjs.com/  
 https://animejs.com/  
 
 ### Dynamic page 
 https://css-tricks.com/rethinking-dynamic-page-replacing-content/  
-
-## API 
-https://en.wikipedia.org/wiki/Representational_state_transfer  
-https://www.google.com/search?client=firefox-b-ab&amp;q=rest+api  
 
 ## Bug fixes 
 https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities  
@@ -135,12 +182,8 @@ https://denverdias.com/2014/11/19/bootstrap-scrollspy-tips/
 https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-will-change-property/  
 https://medium.com/vehikl-news/fixed-background-image-performance-issue-6b7d9e2dbc55  
 
-### Gatsby 
-https://github.com/gatsbyjs/gatsby/issues/12744  
-https://github.com/gatsbyjs/gatsby/issues/7377  
-https://github.com/gatsbyjs/gatsby/issues/10115  
-
 ## Char encoding 
+https://dev.w3.org/html5/html-author/charref  
 https://www.toptal.com/designers/htmlarrows/  
 
 ## Color 
@@ -151,23 +194,33 @@ https://colorable.jxnblk.com/f2ff00/310066
 https://coolors.co/  
 https://jxnblk.com/hello-color/?c=6ee603  
 https://jxnblk.com/grays/  
+https://www.materialui.co/colors  
 https://palx.jxnblk.com/07c  
 https://en.wikipedia.org/wiki/Web_colors  
 https://monochrome.jxnblk.com/  
 https://jxnblk.com/shade/?base=%23E1CC41&amp;hueShift=101&amp;saturate=0.43&amp;lighten=-0.02  
 
 ### Gradient 
+https://codepen.io/captainbrosset/pen/ByqRMB  
+https://medium.com/@patrickbrosset/do-you-really-understand-css-linear-gradients-631d9a895caf  
 https://css-tricks.com/easing-linear-gradients/  
+https://uigradients.com/#BlackRos%C3%A9  
 
 ## Content 
 https://www.pexels.com/  
 https://www.toptal.com/designers/subtlepatterns/  
 
 ## CORS 
+https://github.com/Rob--W/cors-anywhere  
 https://cors-anywhere.dominik-hanke.de/  
 
 ## Cron 
 https://crontab.guru/  
+
+## Data visualisation 
+https://github.com/chartjs  
+https://d3js.org/  
+https://observablehq.com/?utm_source=blocks  
 
 ## Databases 
 https://www.npmjs.com/package/lowdb  
@@ -175,7 +228,7 @@ https://www.npmjs.com/package/lowdb
 ## Datenschutzerklärung 
 https://www.wbs-law.de/it-recht/datenschutzrecht/datenschutzerklaerung-generator/  
 
-## Deployment hosting 
+## Deployment+hosting 
 https://www.arweave.org/  
 https://nowhosting.net/  
 https://medium.com/@RockChalkDev/deploying-with-zeits-now-cli-796e41f05102  
@@ -185,10 +238,19 @@ https://jenkins.io/
 https://zeit.co/now  
 https://zeit.co/  
 
+## Desktop 
+https://electronjs.org/  
+
 ## Effects 
 https://julienmelissas.com/animated-x-icon-for-the-bootstrap-navbar-toggle/  
 https://denverdias.com/2014/11/19/bootstrap-scrollspy-tips/  
 https://davidwalsh.name/parallax  
+https://codepen.io/zjun/pen/dGPqzQ  
+
+### Text scroll 
+https://codepen.io/Veronica18/pen/zLarzM  
+https://codepen.io/Murtaxa/pen/egrRbN  
+https://www.quackit.com/css/codes/marquees/create_css_marquee_using_margins.cfm  
 
 ## Favicon 
 https://realfavicongenerator.net/blog/favicon-why-youre-doing-it-wrong/  
@@ -216,12 +278,16 @@ https://thedesignersfoundry.com/
 https://www.typotheque.com/  
 
 ### Usage 
+https://css-tricks.com/snippets/css/font-stacks/  
 https://css-tricks.com/understanding-web-fonts-getting/  
 https://transfonter.org/formats  
 
 ## Formating 
 https://jsonformatter.curiousconcept.com/#  
 https://tinypng.com/  
+
+## Hacks 
+https://medium.freecodecamp.org/modern-frontend-hacking-cheatsheets-df9c2566c72a  
 
 ## Helpers 
 https://gomakethings.com/2018/01/11/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/  
@@ -230,6 +296,7 @@ https://gomakethings.com/2018/01/11/automatically-expand-a-textarea-as-the-user-
 https://konpa.github.io/devicon/  
 https://feathericons.com/  
 https://material.io/tools/icons/?style=baseline  
+https://www.ikonate.com/  
 https://ionicons.com/  
 https://thenounproject.com/  
 https://icon.now.sh/  
@@ -246,10 +313,18 @@ https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves
 https://en.wikipedia.org/wiki/Dither  
 https://en.wikipedia.org/wiki/Hexadecimal  
 
+## Meta tags 
+https://support.google.com/webmasters/answer/79812?hl=en  
+
 ## Nerd stuff 
 http://patorjk.com/software/taag/#p=display&amp;f=Graffiti&amp;t=Type%20Something%20  
 
+## Node 
+https://nodesource.com/blog/installing-node-js-tutorial-using-nvm-on-mac-os-x-and-ubuntu/  
+https://devhints.io/npm  
+
 ## Performance 
+http://blog.dynamicdrive.com/5-brilliant-ways-to-lazy-load-images-for-faster-page-loads/  
 https://developers.google.com/speed/pagespeed/insights/?hl=de  
 https://tools.pingdom.com/  
 
@@ -257,6 +332,8 @@ https://tools.pingdom.com/
 https://codepen.io/franky/pen/zzOXey  
 https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/  
 https://css-tricks.com/centering-css-complete-guide/  
+https://css-tricks.com/perfect-full-page-background-image/  
+https://labs.jensimmons.com/2016/examples/object-fit.html  
 https://css-tricks.com/guides/layout/  
 https://css-tricks.com/the-trick-to-viewport-units-on-mobile/#article-header-id-1  
 
@@ -265,12 +342,14 @@ https://github.com/toddmotto/public-apis
 https://www.govdata.de/  
 https://daten.berlin.de/  
 
-## Responsive 
+## Responsive design 
 http://cssmediaqueries.com/  
 https://css-tricks.com/snippets/css/media-queries-for-standard-devices/  
 https://css-tricks.com/the-trick-to-viewport-units-on-mobile/  
 
 ### Images 
+https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/  
+https://css-tricks.com/responsive-images-css/  
 https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/  
 https://github.com/lovell/sharp  
 https://www.npmjs.com/package/responsive-images-generator  
@@ -308,15 +387,9 @@ https://www.indexhibit.org/what-who-why-how/
 https://www.webdevdrops.com/build-static-site-generator-nodejs-8969ebe34b22/  
 https://github.com/FBW-10/minimalistic-portfolio-static-site-generator  
 
-### Gatsby 
-https://jenniferwadella.com/blog/all-the-dumb-mistakes-i-made-building-my-first-gatsby-site  
-https://softwareengineeringdaily.com/2017/08/17/gatsbyjs-with-kyle-mathews/  
-https://www.gatsbyjs.org/  
-https://www.gatsbyjs.org/blog/2018-12-19-kentico-cloud-and-gatsby-take-you-beyond-static-websites/  
-https://www.gatsbyjs.org/docs/using-graphql-playground/  
-
 ## SVG 
 https://css-tricks.com/a-complete-guide-to-svg-fallbacks/  
+https://tympanus.net/codrops/2017/10/17/dynamic-shape-overlays-with-svg/  
 https://css-tricks.com/lodge/svg/  
 
 ## Template engines 
