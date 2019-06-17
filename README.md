@@ -4,7 +4,7 @@ Bookmark Resource Generator is a CLI utility that generates a comprehensive link
 
 This utility allows you to easily render your research folders into a resource file in order to store and share it with peer colleagues, students, researchers and the like.
 
-#### \>\> Check out the [Example generated Resource File](./output/dev-tools-and-resources.md)
+#### \>\> Check out the [example generated resource file](./output/dev-tools-and-resources.md)
 
 ![Directory tree screenshot](./directories.png)
 
