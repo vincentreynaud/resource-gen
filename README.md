@@ -1,10 +1,10 @@
 # Bookmark Resource Generator
 
-Bookmark Resource Generator is a CLI utility to parse webloc and browser-printed pdf files of the file system into a comprehensive link inventory in Markdown.
+Bookmark Resource Generator is a CLI utility that generates a comprehensive link inventory in Markdown out of `webloc` and browser-printed pdf files of the file system.
 
-This utility allows you to render your research folders into a reousource file which you can then share with peer colleagues, learners, researchers and the like.
+This utility allows you to easily render your research folders into a resource file in order to store and share it with peer colleagues, students, researchers and the like.
 
-\>\> Check out the [Example generated Resource File](./output/dev-tools-and-resources.md)
+#### \>\> Check out the [Example generated Resource File](./output/dev-tools-and-resources.md)
 
 ![Directory tree screenshot](./directories.png)
 
@@ -23,9 +23,9 @@ npm install -g bookmark-resource-generator
 
 ## Usage
 
-`resource-gen` will crawl into the directory tree, strating from the input directory, and retrieve links found in files such as `webloc` and `pdf`. In Markdwon, The tree is rendered in a heading hierarchy: The base directory name is printed as h1, its sub-directories as h2, and so on and so forth.
+`resource-gen` will crawl into the directory tree, starting from the input directory, and retrieve links found in files such as `webloc` and `pdf`. In Markdown, The tree is rendered in a heading hierarchy: The base directory name is printed as h1, its sub-directories as h2 and so on.
 
-The generated Markdown is output in the crawled directory. Using the `--log` option, you can additionally output a log file to check if there were failures to retrive links during crawl.
+The generated Markdown is output in the crawled directory. Using the `--log` option, you can additionally output a log file to check if there were failures to retrieve links during crawl.
 
 ### Command
 
@@ -91,8 +91,8 @@ Bookmark Resource Generator will retrieve urls form the following file formats, 
 
 ## Contributions
 
-Contribution guidelines comming soon. Project improvements listed in [issues](https://github.com/vincentreynaud/bookmark-resource-generator/issues) section.
+Contribution guidelines coming soon. Project improvements listed in [issues](https://github.com/vincentreynaud/bookmark-resource-generator/issues) section.
 
 ## Licence
 
-MIT
+[MIT](./LICENSE)
