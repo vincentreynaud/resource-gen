@@ -1,5 +1,5 @@
 {
-  "name": "bookmark-resource-generator",
+  "name": "resource-gen",
   "version": "1.0.0",
   "author": "Vincent Reynaud <mail@vincentreynaud.de>",
   "description": "Utility to parse webloc & browser-printed pdf files into a comprehensive list of links in Markdown",
