@@ -37,6 +37,7 @@ const argv = require("yargs")
 
 const path = require("path");
 const print = require("./lib/print");
+const { setOutputFile } = require("./lib/helpers");
 
 let dirpath = argv._[0];
 let outputFileName = argv._[1];
@@ -62,17 +63,4 @@ try {
   print(outputFile, dirpath, options);
 } catch (error) {
   console.error(error);
-}
-
-function setOutputFile(name) {
-  let outputFile;
-
-  if (!path.extname(name)) {
-    outputFile = name + ".md";
-  } else if (path.extname(name) === ".md") {
-    outputFile = name;
-  } else {
-    throw new Error(`Incorrect file extension "${name}", please use .md or simply specify file name`);
-  }
-  return outputFile;
 }
