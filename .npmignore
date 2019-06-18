@@ -1,2 +1,7 @@
+.vscode
+DS_Store
 directories.png
 output/
+tests/
+.prettierignore
+resource-gen.log
