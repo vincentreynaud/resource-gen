@@ -55,8 +55,8 @@ if (path.extname(baseName)) {
 }
 if (!outputFileName) outputFileName = baseName;
 
-const outputFile = path.join("output", setOutputFile(outputFileName));
-// const outputFile = path.join(dirpath, setOutputFile(outputFileName)); // switch back to generate in craweled folder
+// const outputFile = path.join("output", setOutputFile(outputFileName));
+const outputFile = path.join(dirpath, setOutputFile(outputFileName)); // switch back to generate in craweled folder
 
 try {
   print(outputFile, dirpath, options);
