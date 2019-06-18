@@ -5,3 +5,4 @@ output/
 tests/
 .prettierignore
 resource-gen.log
+eslintrc.json

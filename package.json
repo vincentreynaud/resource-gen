@@ -37,7 +37,7 @@
     "file-system": "^2.2.2",
     "path": "^0.12.7",
     "pdf-parse": "^1.1.1",
-    "yargs": "^13.2.2"
+    "yargs": "^13.2.4"
   },
   "engines": {
     "node": ">=11.4.0"
@@ -45,5 +45,12 @@
   "os": [
     "darwin",
     "linux"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "eslint": "^5.16.0",
+    "eslint-plugin-node": "^9.1.0"
+  }
 }
