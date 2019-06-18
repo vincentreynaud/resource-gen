@@ -3,6 +3,7 @@ DS_Store
 directories.png
 output/
 tests/
+output-tests/
 .prettierignore
 resource-gen.log
 eslintrc.json

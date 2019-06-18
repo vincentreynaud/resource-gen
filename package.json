@@ -27,8 +27,8 @@
   "scripts": {
     "gen": "node cli.js",
     "lint": "eslint . --ext .js",
-    "test": "node cli.js '/Users/vincentreynaud/Dropbox/Development DCI/tools-and-resources' dev-tools-and-resources -l -i _snippets liked gatsby -t 'Useful Web Development Links'",
-    "test-ca": "node cli.js '/Users/vincentreynaud/Desktop/FILES/WORK/1 Production/1 COLLECTIVE ANXIETY/2 Research/3 The Future?' test-ca -l",
+    "test": "jest",
+    "test:gen": "node cli.js '/Users/vincentreynaud/Dropbox/Development DCI/tools-and-resources' dev-tools-and-resources -l -i _snippets liked gatsby -t 'Useful Web Development Links'",
     "pre-publish": "npm run lint && npm run test && npm run gen --"
   },
   "bin": {
@@ -51,7 +51,9 @@
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
     "eslint": "^5.16.0",
-    "eslint-plugin-node": "^9.1.0"
+    "eslint-plugin-node": "^9.1.0",
+    "jest": "^24.8.0"
   }
 }

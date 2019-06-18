@@ -3,5 +3,5 @@
 DS_Store
 node_modules
 .prettierignore
-tests/
+output-tests/
 resource-gen.log
