@@ -4,7 +4,9 @@
 
 const argv = require("yargs")
   .usage("Usage: $0 <directory-path> [<output-file>] [options]")
-  .example("$0 ./Development/tools-and-resources dev-tools-and-resources --depth 3 --ignore 'code-snippets'")
+  .example(
+    "$0 ./Development/tools-and-resources dev-tools-and-resources --depth 3 --ignore 'code-snippets'"
+  )
   .command({
     command: "<directory-path> [<output-file>] [options]",
     desc: "Specify the directory to crawl, and optionally the output file name"
@@ -51,13 +53,15 @@ if (path.isAbsolute(dirpath) === false) dirpath = path.resolve(dirpath);
 
 const baseName = path.parse(dirpath).base;
 if (path.extname(baseName)) {
-  console.error(`Path provided is a file path. Did you mean "${path.dirname(dirpath)}"?`);
+  console.error(
+    `Path provided is a file path. Did you mean "${path.dirname(dirpath)}"?`
+  );
   return;
 }
 if (!outputFileName) outputFileName = baseName;
 
-// const outputFile = path.join("output", setOutputFile(outputFileName));
-const outputFile = path.join(dirpath, setOutputFile(outputFileName)); // switch back to generate in craweled folder
+const outputFile = path.join("output", setOutputFile(outputFileName));
+// const outputFile = path.join(dirpath, setOutputFile(outputFileName)); // switch back to generate in crawled folder
 
 try {
   print(outputFile, dirpath, options);
