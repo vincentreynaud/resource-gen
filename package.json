@@ -28,7 +28,7 @@
     "gen": "node cli.js",
     "lint": "eslint . --ext .js",
     "test": "jest",
-    "test:gen": "node cli.js '/Users/vincentreynaud/Dropbox/Development DCI/tools-and-resources' dev-tools-and-resources -l -i _snippets liked gatsby -t 'Useful Web Development Links'",
+    "test:gen": "node cli.js '/Users/vincentreynaud/Dropbox/1 Web Development/1 DCI/tools-and-resources' dev-tools-and-resources -l -i _snippets courses liked gatsby -t 'Useful Web Development Links'",
     "pre-publish": "npm run lint && npm run test && npm run gen --"
   },
   "bin": {

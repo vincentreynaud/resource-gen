@@ -1,7 +1,7 @@
 
 # Tools and resources 
 Useful Web Development Links  
-Resource generated from /Users/vincentreynaud/Dropbox/Development DCI/tools-and-resources  
+Resource generated from /Users/vincentreynaud/Dropbox/1 Web Development/1 DCI/tools-and-resources  
 
 ## DOM events 
 https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android  
@@ -16,6 +16,24 @@ https://www.safaribooksonline.com/search/?query=javascript&extended_publisher_da
 https://softwareengineeringdaily.com/  
 
 ## _technologies 
+
+### JavaScript 
+https://www.freecodecamp.org/news/es5-to-esnext-heres-every-feature-added-to-javascript-since-2015-d0c255e13c6e/  
+http://marijnhaverbeke.nl/js-cheatsheet.html  
+
+#### Libraries 
+http://bootboxjs.com/  
+https://www.dropzonejs.com/  
+http://dynamicsjs.com/  
+https://select2.org/  
+https://lodash.com/  
+https://modernizr.com/docs/  
+https://momentjs.com/  
+
+### TypeScript 
+https://www.typescriptlang.org/  
+https://www.youtube.com/watch?v=ahCwqrYpIuM  
+https://devhints.io/typescript  
 
 ### AI 
 https://medium.com/towards-data-science/data-science/home  
@@ -47,6 +65,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API
 https://spacy.io/  
 
 ### CSS 
+https://www.sitepoint.com/css-architecture-block-element-modifier-bem/  
 https://css-tricks.com/loops-css-preprocessors/  
 http://enjoycss.com/  
 
@@ -62,19 +81,6 @@ https://graphql.org/learn/
 https://www.prisma.io/  
 https://date-fns.org/docs/Getting-Started  
 
-### Js libraries 
-http://bootboxjs.com/  
-https://www.dropzonejs.com/  
-http://dynamicsjs.com/  
-https://select2.org/  
-https://lodash.com/  
-https://modernizr.com/docs/  
-https://momentjs.com/  
-
-#### TypeScript 
-https://www.typescriptlang.org/  
-https://www.youtube.com/watch?v=ahCwqrYpIuM  
-
 ### Markdown 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet  
 https://github.com/dcurtis/markdown-mark  
@@ -84,13 +90,18 @@ https://flutter.dev/
 
 ### Node JS 
 https://codeburst.io/fractal-a-nodejs-app-structure-for-infinite-scale-d74dda57ee11  
+https://nodesource.com/blog/installing-node-js-tutorial-using-nvm-on-mac-os-x-and-ubuntu/  
 https://jsonplaceholder.typicode.com/  
 https://github.com/i0natan/nodebestpractices  
+https://devhints.io/npm  
 http://yargs.js.org/  
 
 #### CLI apps 
 https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e  
 https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/  
+
+#### CLI apps npm 
+https://medium.com/@TeeFouad/a-simple-guide-to-publishing-an-npm-package-506dd7f3c47a  
 https://semver.org/  
 https://medium.com/@alexishevia/the-magic-behind-npm-link-d94dcb3a81af  
 https://docs.npmjs.com/misc/developers  
@@ -160,6 +171,7 @@ https://eu.udacity.com/course/web-accessibility--ud891
 https://www.carbonads.net/  
 
 ## Analytics 
+https://themeisle.com/blog/google-analytics-interface-explained/  
 https://matomo.org/  
 
 ## Animations 
@@ -171,6 +183,7 @@ http://animista.net/
 https://css-tricks.com/controlling-css-animations-transitions-javascript/  
 https://codeburst.io/create-a-revealing-animation-with-anime-js-25a49bc98cd7  
 http://dynamicsjs.com/  
+https://www.pixijs.com/  
 https://animejs.com/  
 
 ### Dynamic page 
@@ -217,6 +230,15 @@ https://cors-anywhere.dominik-hanke.de/
 ## Cron 
 https://crontab.guru/  
 
+## Css positioning 
+https://codepen.io/franky/pen/zzOXey  
+https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/  
+https://css-tricks.com/centering-css-complete-guide/  
+https://css-tricks.com/perfect-full-page-background-image/  
+https://labs.jensimmons.com/2016/examples/object-fit.html  
+https://css-tricks.com/guides/layout/  
+https://css-tricks.com/the-trick-to-viewport-units-on-mobile/#article-header-id-1  
+
 ## Data visualisation 
 https://github.com/chartjs  
 https://d3js.org/  
@@ -245,7 +267,14 @@ https://electronjs.org/
 https://julienmelissas.com/animated-x-icon-for-the-bootstrap-navbar-toggle/  
 https://denverdias.com/2014/11/19/bootstrap-scrollspy-tips/  
 https://davidwalsh.name/parallax  
+https://css-tricks.com/snippets/jquery/smooth-scrolling/  
 https://codepen.io/zjun/pen/dGPqzQ  
+
+### Animated gradient 
+https://www.theguardian.com/environment/ng-interactive/2019/jul/01/its-getting-warmer-wetter-wilder-the-arctic-town-heating-faster-than-anywhere  
+
+### Resize on scroll 
+https://stackoverflow.com/questions/45482820/how-to-reduce-element-height-proportionally-while-scrolling-limited-by-a-scroll  
 
 ### Text scroll 
 https://codepen.io/Veronica18/pen/zLarzM  
@@ -282,7 +311,7 @@ https://css-tricks.com/snippets/css/font-stacks/
 https://css-tricks.com/understanding-web-fonts-getting/  
 https://transfonter.org/formats  
 
-## Formating 
+## Formatting 
 https://jsonformatter.curiousconcept.com/#  
 https://tinypng.com/  
 
@@ -317,25 +346,13 @@ https://en.wikipedia.org/wiki/Hexadecimal
 https://support.google.com/webmasters/answer/79812?hl=en  
 
 ## Nerd stuff 
+https://www.tetoki.eu/asciiart/  
 http://patorjk.com/software/taag/#p=display&amp;f=Graffiti&amp;t=Type%20Something%20  
-
-## Node 
-https://nodesource.com/blog/installing-node-js-tutorial-using-nvm-on-mac-os-x-and-ubuntu/  
-https://devhints.io/npm  
 
 ## Performance 
 http://blog.dynamicdrive.com/5-brilliant-ways-to-lazy-load-images-for-faster-page-loads/  
 https://developers.google.com/speed/pagespeed/insights/?hl=de  
 https://tools.pingdom.com/  
-
-## Positioning & layout 
-https://codepen.io/franky/pen/zzOXey  
-https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/  
-https://css-tricks.com/centering-css-complete-guide/  
-https://css-tricks.com/perfect-full-page-background-image/  
-https://labs.jensimmons.com/2016/examples/object-fit.html  
-https://css-tricks.com/guides/layout/  
-https://css-tricks.com/the-trick-to-viewport-units-on-mobile/#article-header-id-1  
 
 ## Public APIs 
 https://github.com/toddmotto/public-apis  
@@ -391,6 +408,8 @@ https://github.com/FBW-10/minimalistic-portfolio-static-site-generator
 https://css-tricks.com/a-complete-guide-to-svg-fallbacks/  
 https://tympanus.net/codrops/2017/10/17/dynamic-shape-overlays-with-svg/  
 https://css-tricks.com/lodge/svg/  
+http://creativedroplets.com/export-svg-for-the-web-with-illustrator-cc/  
+https://medium.com/sketch-app-sources/how-designers-should-think-about-svg-b2b92efc4d77  
 
 ## Template engines 
 https://pugjs.org/api/getting-started.html  
@@ -399,8 +418,16 @@ http://handlebarsjs.com/
 http://handlebarsjs.com/  
 https://pughtml.com/  
 
+## Testing 
+https://jestjs.io/docs/en/getting-started  
+https://designmodo.com/test-javascript-unit/  
+https://github.com/spielhoelle/zelos  
+
 ## Trademark 
 https://www.dpma.de/english/search/dpmaregister/index.html  
+
+## UX 
+https://themeisle.com/blog/improve-wordpress-website-navigation/  
 
 ## Web audio API 
 https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio  
